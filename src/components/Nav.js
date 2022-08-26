@@ -18,6 +18,15 @@ const Nav = () => {
     }
   });
 
+  // 導覽列active狀態切換
+  const navClick = (e) => {
+    let navA = document.querySelectorAll("a");
+    navA.forEach((Link) => {
+      Link.classList.remove("active");
+    });
+    e.target.classList.toggle("active");
+  };
+
   return (
     <div id="NavBar" class="fixed-top">
       <nav class="navbar navbar-expand-lg w-100 p-4 fixed-top navbar-dark">
@@ -50,9 +59,11 @@ const Nav = () => {
               <Link
                 id="navA"
                 smooth={true}
-                class="nav-link active mx-3"
-                aria-current="page"
+                // class="nav-link active mx-3"
+                class="nav-link  mx-3"
+                // aria-current="page"
                 to="HomePhoto"
+                onClick={navClick}
               >
                 Home
               </Link>
@@ -60,8 +71,9 @@ const Nav = () => {
                 id="navA"
                 smooth={true}
                 offset={-87}
-                class="nav-link mx-3"
+                class={`nav-link mx-3 `}
                 to="About"
+                onClick={navClick}
               >
                 About
               </Link>
