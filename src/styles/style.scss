@@ -14,8 +14,16 @@
     font-family: 'Silkscreen', "CH",
 }
 
-.active {
-    border-bottom: 2px solid #8e0103;
+.nav-link::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #8e0103;
+    transform: scaleX(0);
+    transition: transform 300ms ease;
+}
+
+.active::after {
+    transform: scaleX(1);
 }
 
 // #HomePhoto,
@@ -36,8 +44,7 @@ p {
 #navAProject,
 #navAContact {
     cursor: pointer;
-    transition: color 0.5s ease;
-    transition: border 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .fixed-top {

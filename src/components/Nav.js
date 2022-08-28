@@ -125,8 +125,9 @@ const Nav = () => {
             <div class="navbar-nav align-items-center ">
               <Link
                 id="navAHome"
+                style={{ width: "100px" }}
                 smooth={true}
-                class="nav-link active mx-3 py-2"
+                class="nav-link active mx-2 py-1 text-center"
                 aria-current="page"
                 to="HomePhoto"
               >
@@ -134,36 +135,40 @@ const Nav = () => {
               </Link>
               <Link
                 id="navAAbout"
+                style={{ width: "100px" }}
                 smooth={true}
                 offset={-87}
-                class="nav-link mx-3 py-1 "
+                class="nav-link mx-2 py-1 text-center "
                 to="About"
               >
                 About
               </Link>
               <Link
                 id="navASkill"
+                style={{ width: "100px" }}
                 smooth={true}
                 offset={-87}
-                class="nav-link mx-3 py-1"
+                class="nav-link mx-2 py-1 text-center"
                 to="Skill"
               >
                 Skill
               </Link>{" "}
               <Link
                 id="navAProject"
+                style={{ width: "100px" }}
                 smooth={true}
                 offset={-87}
-                class="nav-link mx-3 py-1"
+                class="nav-link mx-2 py-1 text-center"
                 to="Project"
               >
                 Project
               </Link>
               <Link
                 id="navAContact"
+                style={{ width: "100px" }}
                 smooth={true}
                 offset={-87}
-                class="nav-link mx-3 py-1"
+                class="nav-link mx-2 py-1 text-center"
                 to="Contact"
               >
                 Contact

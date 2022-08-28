@@ -14,7 +14,10 @@ const About = () => {
       >
         {/* 圖片區 */}
         <div className="col-md-4 py-3 py-md-0 d-flex">
-          <img src={ResumePhoto} className="w-100  object-fit-cover" />
+          <img
+            src={ResumePhoto}
+            className="w-100  object-fit-cover rounded-3"
+          />
         </div>
         {/* 文字區 */}
         <div className="col-md-8 py-3 text-center text-md-start d-flex  justify-content-center flex-column">

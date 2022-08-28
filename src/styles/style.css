@@ -11,8 +11,21 @@
   font-family: "Silkscreen", "CH";
 }
 
-.active {
-  border-bottom: 2px solid #8e0103;
+.nav-link::after {
+  display: block;
+  content: '';
+  border-bottom: solid 3px #8e0103;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+.active::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 p {
@@ -25,10 +38,8 @@ p {
 #navAProject,
 #navAContact {
   cursor: pointer;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease;
-  -webkit-transition: border 0.3s ease;
-  transition: border 0.3s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .fixed-top {
