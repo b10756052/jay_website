@@ -85,6 +85,21 @@ p {
   transition: all 0.3s ease;
 }
 
+.hidden {
+  -webkit-transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.hidden.open {
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+  opacity: 1;
+  max-height: 700px;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

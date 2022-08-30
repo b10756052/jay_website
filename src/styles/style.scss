@@ -81,6 +81,20 @@ p {
     transition: all 0.3s ease;
 }
 
+// about按鈕切換顯示的文字
+.hidden {
+    transition: max-height 0.4s ease;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.hidden.open {
+    transition: all 1.5s ease-in-out;
+    opacity: 1;
+    max-height: 700px;
+}
+
 @import "../../node_modules/bootstrap/scss/functions";
 @import "./helpers/variables";
 // @import "../../node_modules/bootstrap/scss/bootstrap";

@@ -4,8 +4,8 @@ import ResumePhoto from "../pictures/resume.jpg";
 const About = () => {
   // 按鈕按下切換顯示的文字區塊
   const ChangeText = () => {
-    document.querySelector(".change1").classList.toggle("d-none");
-    document.querySelector(".change2").classList.toggle("d-none");
+    document.querySelector(".change1").classList.toggle("open");
+    document.querySelector(".change2").classList.toggle("open");
   };
 
   return (
@@ -27,12 +27,29 @@ const About = () => {
         </div>
         {/* 文字區 */}
         <div className=" col-md-8 py-3 text-center text-md-start d-flex  justify-content-center flex-column">
-          <div className=" change1   ">
+          <div className="change1 hidden open">
             <h2 className="mb-4">About me：</h2>
-            <h3 className="mb-3 d-md-none text-start">- 對前端擁有強烈熱情</h3>
-            <h3 className="mb-3 mb-md-4 text-start">- 性格樂觀、善於溝通</h3>
-            <h3 className="mb-3 d-md-none text-start ">- 培養獨立思考能力</h3>
-            <h3 className="mb-3 d-md-none text-start">- 喜歡挑戰</h3>
+            <h3 className="ms-1 mb-3 d-md-none text-start">
+              - 蘇志傑；屏科資管系
+            </h3>
+            <h3 className="ms-1 mb-3 d-md-none text-start">
+              - 對前端擁有強烈熱情
+            </h3>
+
+            <h3 className="mb-3 mb-md-4 d-none d-md-flex text-start">
+              - 蘇志傑
+            </h3>
+
+            <h3 className="mb-3 mb-md-4 d-none d-md-flex text-start">
+              - 國立屏科大資管系
+            </h3>
+            <h3 className="ms-1 ms-md-0 mb-3 mb-md-4 text-start">
+              - 性格樂觀、善於溝通
+            </h3>
+            <h3 className="ms-1 mb-3 d-md-none text-start ">
+              - 培養獨立思考能力
+            </h3>
+            <h3 className="ms-1 mb-3 d-md-none text-start">- 喜歡挑戰</h3>
             <h3 className="mb-4 d-none d-md-block ">
               - 喜歡挑戰、培養獨立思考、自主解決問題能力
             </h3>
@@ -41,7 +58,7 @@ const About = () => {
             </h3>
           </div>
 
-          <div className="   change2 d-none">
+          <div className="change2 hidden">
             <h3 className="text-start d-none d-md-flex">- 前端之路</h3>
             <h3 className="text-center  d-md-none ">《前端之路》</h3>
             <p className="ms-1 w-90 text-start d-none d-md-flex">
