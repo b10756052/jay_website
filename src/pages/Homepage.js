@@ -1,5 +1,4 @@
 import React from "react";
-import BlackBikeImg from "../pictures/BlackBike.jpg";
 
 const Homepage = () => {
   return (
@@ -14,11 +13,8 @@ const Homepage = () => {
           bottom: "0vh",
           left: "0vh",
           right: "0vh",
-          // backgroundImage: `url(${BlackBikeImg})`,
           backgroundImage:
             "url(https://images.unsplash.com/photo-1546900703-cf06143d1239?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1750&q=80)",
-          // backgroundImage:
-          //   "url(https://images.unsplash.com/photo-1612282130134-49784d98ac61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1218&q=80)",
         }}
         className="position-absolute bg-lg-cover bg-attachment-fixed "
       >

@@ -9,7 +9,8 @@ const Nav = () => {
       nav.style.backgroundColor = "rgba(0,0,0,1)";
       nav.style.boxShadow = "3px 1px 3px rgba(255,255,255,0.3)";
     } else {
-      nav.style = "";
+      nav.style.backgroundColor = "";
+      nav.style.boxShadow = "";
     }
   });
 
@@ -64,11 +65,12 @@ const Nav = () => {
   };
 
   // 重複，每隔200豪秒，執行抓取當前位置的函數
+
   setInterval(scrollPosition, 200);
 
   // 當position state變動時，切換active狀態
   useEffect(() => {
-    console.log("位置變動了,useEffect準備執行，目前在", position);
+    // console.log("位置變動了,useEffect準備執行，目前在", position);
     let navA = document.querySelectorAll("a");
     navA.forEach((Link) => {
       Link.classList.remove("active");

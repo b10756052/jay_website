@@ -12,15 +12,18 @@
 }
 
 .nav-link::after {
-  display: block;
+  margin-top: 2.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   content: '';
   border-bottom: solid 3px #8e0103;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: -webkit-transform 300ms ease;
-  transition: -webkit-transform 300ms ease;
-  transition: transform 300ms ease;
-  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
 }
 
 .active::after {
@@ -29,7 +32,13 @@
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  line-height: 1.85;
+}
+
+#navA {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 #navAHome,

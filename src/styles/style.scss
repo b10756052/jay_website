@@ -7,19 +7,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // font-family: 'Kdam Thmor Pro', sans-serif;
     // font-family: 'Noto Sans TC', sans-serif;
-    // font-family: 'Silkscreen', cursive;
     // font-family: 'Silkscreen', Noto Sans TC;
     font-family: 'Silkscreen', "CH",
 }
 
 .nav-link::after {
-    display: block;
+    margin-top: 2.5px;
+    display: flex;
     content: '';
     border-bottom: solid 3px #8e0103;
     transform: scaleX(0);
-    transition: transform 300ms ease;
+    transition: transform 0.25s ease-out;
 }
 
 .active::after {
@@ -34,8 +33,13 @@
 //     font-family: 'Noto Sans TC', sans-serif;
 // }
 p {
-    font-size: 1.25rem;
-    // line-height: 3;
+    font-size: 1.15rem;
+    line-height: 1.85;
+}
+
+// 導覽列JAYRESUME字樣
+#navA {
+    cursor: grabbing;
 }
 
 #navAHome,
