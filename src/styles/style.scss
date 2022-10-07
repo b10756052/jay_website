@@ -3,13 +3,25 @@
     src: url(../ttf/Cubic_11_1.013_R.ttf); // 下載的字體檔案路徑
 }
 
+// #HomePhoto,
+// #NavBar {
+//     font-family: 'Silkscreen', "CH",
+// }
+// body {
+//     font-family: 'Noto Sans TC', sans-serif;
+// }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     // font-family: 'Noto Sans TC', sans-serif;
     // font-family: 'Silkscreen', Noto Sans TC;
-    font-family: 'Silkscreen', "CH",
+    font-family: 'Silkscreen', "CH";
+}
+
+.scrollNotTop {
+    background-color: black;
+    box-shadow: 3px 1px 3px rgba(255, 255, 255, 0.3);
 }
 
 .nav-link::after {
@@ -25,13 +37,6 @@
     transform: scaleX(1);
 }
 
-// #HomePhoto,
-// #NavBar {
-//     font-family: 'Silkscreen', "CH",
-// }
-// body {
-//     font-family: 'Noto Sans TC', sans-serif;
-// }
 p {
     font-size: 1.15rem;
     line-height: 1.85;
@@ -53,9 +58,6 @@ p {
 
 .fixed-top {
     transition: all 0.5s ease;
-    nav {
-        background-color: rgba(0, 0, 0, 0);
-    }
 }
 
 #navbarNavAltMarkup {

@@ -6,11 +6,9 @@ const Nav = () => {
   window.addEventListener("scroll", () => {
     let nav = document.querySelector("nav");
     if (window.pageYOffset !== 0) {
-      nav.style.backgroundColor = "rgba(0,0,0,1)";
-      nav.style.boxShadow = "3px 1px 3px rgba(255,255,255,0.3)";
+      nav.classList.add("scrollNotTop");
     } else {
-      nav.style.backgroundColor = "";
-      nav.style.boxShadow = "";
+      nav.classList.remove("scrollNotTop");
     }
   });
 
@@ -64,13 +62,16 @@ const Nav = () => {
     }
   };
 
-  // 重複，每隔200豪秒，執行抓取當前位置的函數
+  // 利用setTimeout搭配遞迴來取代setInterval重複執行function的效果，改善時間一久，網頁會卡頓的問題
+  let CallPosition = () => {
+    scrollPosition();
+    setTimeout(CallPosition, 250);
+  };
+  // 第一次呼叫CallPosition時，先晚200毫秒再呼叫，否則會因為scrollPosition還沒抓到DOM而報錯
+  setTimeout(CallPosition, 200);
 
-  setInterval(scrollPosition, 200);
-
-  // 當position state變動時，切換active狀態
+  // 當position state一變動時，便切換導覽列選項active狀態
   useEffect(() => {
-    // console.log("位置變動了,useEffect準備執行，目前在", position);
     let navA = document.querySelectorAll("a");
     navA.forEach((Link) => {
       Link.classList.remove("active");
@@ -92,15 +93,6 @@ const Nav = () => {
       navAContact.classList.toggle("active");
     }
   }, [position]);
-
-  // // 導覽列active狀態切換
-  // const navClick = (e) => {
-  //   let navA = document.querySelectorAll("a");
-  //   navA.forEach((Link) => {
-  //     Link.classList.remove("active");
-  //   });
-  //   e.target.classList.toggle("active");
-  // };
 
   return (
     <div id="NavBar" class="fixed-top">
