@@ -13,28 +13,61 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    // box-sizing: border-box;
     // font-family: 'Noto Sans TC', sans-serif;
     // font-family: 'Silkscreen', Noto Sans TC;
     font-family: 'Silkscreen', "CH";
 }
 
+//scroll bar
+
+/* width */
+
+::-webkit-scrollbar {
+    // width: 0px !important;
+    width: 10.5px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    // border-radius: 10px;
+    // background: transparent;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #8e0103;
+    // border-radius: 50px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(194, 22, 22);
+}
+
+// nav page process
 .scrollNotTop {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     box-shadow: 3px 1px 3px rgba(255, 255, 255, 0.3);
 }
 
 .nav-link::after {
+    content: '';
     margin-top: 2.5px;
     display: flex;
-    content: '';
-    border-bottom: solid 3px #8e0103;
+    border-bottom: solid 1px #8e0103;
     transform: scaleX(0);
-    transition: transform 0.25s ease-out;
+    transition: transform 0.25s ease-in-out;
 }
 
 .active::after {
-    transform: scaleX(1);
+    transform: scaleY(3);
 }
 
 p {
@@ -52,8 +85,15 @@ p {
 #navASkill,
 #navAProject,
 #navAContact {
+    width: 105px;
+    text-decoration: none;
+    color: white;
     cursor: pointer;
     transition: all 0.5s ease;
+}
+
+#navAProject {
+    margin-right: 1.3rem !important;
 }
 
 .fixed-top {
@@ -81,9 +121,11 @@ p {
 // AboutPage's LoadMore Button
 #AboutButton {
     transition: all 0.3s ease;
+    box-shadow: 0px 0px 1.75px 2px #8e0103;
+    border: none;
 }
 
-// about按鈕切換顯示的文字
+// AboutPage's LoadMore Button切換顯示的文字
 .hidden {
     transition: max-height 0.4s ease;
     opacity: 0;
@@ -95,6 +137,235 @@ p {
     transition: all 1.5s ease-in-out;
     opacity: 1;
     max-height: 700px;
+}
+
+.ResumePhoto {
+    box-shadow: 0px 0px 20px 1px rgb(98, 98, 98);
+}
+
+// pages頁面白灰白灰錯開顯示
+#Skill,
+#Contact {
+    background-color: rgb(243, 243, 243)
+}
+
+// skill page
+#Skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 3rem 0rem 3rem 0rem;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+
+        .card {
+            position: relative;
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+            box-shadow: 0 0 8px 1px rgba(133, 99, 99, 0.45);
+            border-radius: 15px;
+            flex: 1 1 250px;
+            margin: 3rem 1rem;
+            width: 25vw;
+            height: 20vh;
+            transition: all 0.3s ease-in-out;
+            transition-delay: 0.15s;
+
+            .titlebox {
+                position: relative;
+                top: -5vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #a3090c;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                border-radius: 10px;
+                transition: all 0.3s ease-in-out;
+
+                h4 {
+                    position: relative;
+                    color: white;
+                    width: 17vw;
+                    height: 11.5vh;
+                    line-height: 11.5vh;
+                    font-size: 1.25rem;
+                }
+
+                @media screen and (max-width:450px) {
+                    h4 {
+                        width: 15vh;
+                        height: 13vh;
+                        line-height: 13vh;
+                    }
+                }
+            }
+
+            .textbox {
+                position: relative;
+                transition: all 0.3s ease;
+                // transition-delay: 0.3s;
+                visibility: hidden;
+                opacity: 0;
+                padding: 1rem;
+
+                p {
+                    position: relative;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 1rem;
+                }
+            }
+
+            &:hover {
+                transition: all 0.3s ease-in-out;
+                height: 400px;
+
+                .textbox {
+                    transition: all 0.3s ease;
+                    transition-delay: 0.3s;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// project page
+// https://codepen.io/aron-tw/pen/pLJqgE <-- 參考網址
+#Project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 2rem 0rem 2rem 0rem;
+
+    .ProjectPageTitle {
+        padding: 0rem 1rem 0rem 1rem;
+        flex-wrap: wrap;
+        font-size: 3rem;
+    }
+
+    .projectLine {
+        width: 80vw;
+        height: 5.5px;
+        background-color: #8e0103e8;
+        border-radius: 10px;
+        margin: 2rem 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .cardFrontH1 {
+        font-size: 2em;
+        // color: rgb(43, 41, 41);
+        // background-color: antiquewhite;
+        // background-color: #8e010394;
+        background-color: #1f1d1d;
+        border-radius: 20px;
+        width: 1000px;
+    }
+
+    .cardsBox {
+        display: flex;
+        flex-wrap: wrap;
+
+        // base
+        .flip {
+            flex: 1 1 250px;
+            cursor: pointer;
+            margin: 1rem;
+            position: relative;
+
+            >.front,
+            >.back {
+                box-shadow: 0px 0px 10px 2px #2c2c2c;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+                transition-duration: 1s;
+                transition-property: transform, opacity;
+            }
+
+            >.front {
+                transform: rotateY(0deg);
+            }
+
+            >.back {
+                flex-direction: column;
+                position: absolute;
+                opacity: 0;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                transform: rotateY(-180deg);
+
+                h2 {
+                    font-size: 1.5rem;
+                    line-height: 70%;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 0.9rem;
+                    color: #e7e6e6;
+                }
+            }
+
+            &:hover {
+                >.front {
+                    transform: rotateY(180deg);
+                }
+
+                >.back {
+                    opacity: 1;
+                    transform: rotateY(0deg);
+                }
+            }
+        }
+
+        // custom
+        .flip {
+            position: relative;
+            display: inline-block;
+            // width: 340px;
+            width: 23vw;
+
+            >.front,
+            >.back {
+                // display: flex;
+                color: white;
+                // width: inherit;
+                background-size: cover !important;
+                background-position: center !important;
+                // height: 220px;
+                height: 30vh;
+                padding: 1em 2em;
+                background: #565656;
+                border-radius: 10px;
+            }
+        }
+
+        // .p-shadow {
+        //     text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+        // }
+    }
+
+    .p-shadow {
+        text-shadow: 0.75px 0.75px rgba(0, 0, 0, 0.02), 1.5px 1.5px rgba(0, 0, 0, 0.02), 2.25px 2.25px rgba(0, 0, 0, 0.02), 3px 3px rgba(0, 0, 0, 0.02), 0.075rem 0.075rem rgba(0, 0, 0, 0.02), 4.5px 4.5px rgba(0, 0, 0, 0.02), 5.25px 5.25px rgba(0, 0, 0, 0.02), 6px 6px rgba(0, 0, 0, 0.02), 6.75px 6.75px rgba(0, 0, 0, 0.02), 0.225rem 0.225rem rgba(0, 0, 0, 0.02), 7.5px 7.5px rgba(0, 0, 0, 0.02), 8.25px 8.25px rgba(0, 0, 0, 0.02), 9px 9px rgba(0, 0, 0, 0.02), 9.75px 9.75px rgba(0, 0, 0, 0.02), 0.325rem 0.325rem rgba(0, 0, 0, 0.02), 10.5px 10.5px rgba(0, 0, 0, 0.02), 11.25px 11.25px rgba(0, 0, 0, 0.02), 12px 12px rgba(0, 0, 0, 0.02), 12.75px 12.75px rgba(0, 0, 0, 0.02), 0.425rem 0.425rem rgba(0, 0, 0, 0.02);
+    }
 }
 
 @import "../../node_modules/bootstrap/scss/functions";

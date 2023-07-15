@@ -16,7 +16,7 @@ const Homepage = () => {
           backgroundImage:
             "url(https://images.unsplash.com/photo-1546900703-cf06143d1239?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1750&q=80)",
         }}
-        className="position-absolute bg-lg-cover bg-attachment-fixed "
+        className="position-absolute bg-lg-cover bg-attachment-fixed d-block  "
       >
         {/* mask */}
         <div
@@ -24,14 +24,17 @@ const Homepage = () => {
           style={{ zIndex: "1000", backgroundColor: "rgba(0,0,0,0.6)" }}
         ></div>
       </div>
-      <div className="position-absolute top-50 start-50 w-75 translate-middle text-center  text-white">
+
+      <div
+        style={{ zIndex: 1000 }}
+        className="position-absolute top-50 start-50 w-75 translate-middle text-center  text-white"
+      >
         {/* rgb(229 224 222) */}
         <h1 style={{ color: "white", fontSize: "5.75vh" }}>Jay Su</h1>
         <hr
           className="my-0 my-md-25"
           style={{ borderTop: "4.5px solid white", borderRadius: "20%" }}
         />
-
         <p style={{ color: "white", fontSize: "4vh" }} className="d-lg-none">
           蘇志傑
         </p>

@@ -1,5 +1,6 @@
 import React from "react";
 import ResumePhoto from "../pictures/resume.jpg";
+import ResumePhoto2 from "../pictures/鵬爺夜市街拍.jpg";
 
 const About = () => {
   // 按鈕按下切換顯示的文字區塊
@@ -14,6 +15,7 @@ const About = () => {
       className="position-relative container d-flex align-items-center  "
       style={{
         minHeight: "88vh",
+
         // backgroundImage:
         //   "url(https://images.unsplash.com/photo-1515549832467-8783363e19b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80)",
       }}
@@ -26,7 +28,7 @@ const About = () => {
         <div className="col-md-4 py-3 py-md-0 d-flex">
           <img
             src={ResumePhoto}
-            className="w-100  object-fit-cover rounded-3"
+            className="w-100  object-fit-cover rounded-3 ResumePhoto"
           />
         </div>
         {/* 文字區 */}
@@ -47,7 +49,10 @@ const About = () => {
             <h3 className="mb-3 mb-md-4 d-none d-md-flex text-start">
               - 國立屏科大資管系
             </h3>
-            <h3 className="ms-1 ms-md-0 mb-3 mb-md-4 text-start">
+            <h3 className="ms-1 ms-md-0 mb-3 mb-md-4 text-start d-none d-lg-block">
+              - 性格樂觀、善於溝通、喜歡挑戰
+            </h3>
+            <h3 className="ms-1 ms-md-0 mb-3 mb-md-4 text-start d-block d-lg-none">
               - 性格樂觀、善於溝通
             </h3>
             <h3 className="ms-1 mb-3 d-md-none text-start ">
@@ -55,10 +60,10 @@ const About = () => {
             </h3>
             <h3 className="ms-1 mb-3 d-md-none text-start">- 喜歡挑戰</h3>
             <h3 className="mb-4 d-none d-md-block ">
-              - 喜歡挑戰、培養獨立思考、自主解決問題能力
+              - 培養獨立思考、自主解決問題能力
             </h3>
             <h3 className="mb-4 d-none d-md-block">
-              - 好奇心重，對前端擁有強烈熱情，持續吸收新知
+              - 對前端擁有強烈熱情，持續吸收新知
             </h3>
           </div>
 
