@@ -41,7 +41,7 @@
 
 ::-webkit-scrollbar-thumb {
     background: #8e0103;
-    // border-radius: 50px;
+    // border-radius: 10px;
 }
 
 
@@ -164,13 +164,12 @@ p {
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        position: relative;
 
         .card {
             position: relative;
             display: flex;
             align-items: center;
-            // justify-content: center;
+            justify-content: center;
             box-shadow: 0 0 8px 1px rgba(133, 99, 99, 0.45);
             border-radius: 15px;
             flex: 1 1 250px;
@@ -181,18 +180,16 @@ p {
             transition-delay: 0.15s;
 
             .titlebox {
-                position: relative;
+                position: absolute;
                 top: -5vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #a3090c;
+                background-color: #ad0d10;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
                 border-radius: 10px;
-                transition: all 0.3s ease-in-out;
 
                 h4 {
-                    position: relative;
                     color: white;
                     width: 17vw;
                     height: 11.5vh;
@@ -210,18 +207,24 @@ p {
             }
 
             .textbox {
-                position: relative;
                 transition: all 0.3s ease;
-                // transition-delay: 0.3s;
                 visibility: hidden;
                 opacity: 0;
-                padding: 1rem;
 
                 p {
-                    position: relative;
                     margin: 0;
                     padding: 0;
                     font-size: 1rem;
+                }
+            }
+
+            .frontEndTextbox {
+                margin-top: 1.25rem;
+            }
+
+            @media screen and (max-width:450px) {
+                .frontEndTextbox {
+                    margin-top: 2.5rem;
                 }
             }
 
@@ -279,6 +282,8 @@ p {
     .cardsBox {
         display: flex;
         flex-wrap: wrap;
+        // 視距 (比較能以肉眼狀態看到三維空間)
+        perspective: 1300px;
 
         // base
         .flip {
@@ -286,6 +291,8 @@ p {
             cursor: pointer;
             margin: 1rem;
             position: relative;
+            // 翻轉時創造三維空間
+            transform-style: preserve-3d;
 
             >.front,
             >.back {
@@ -293,9 +300,12 @@ p {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                // 讓前、後兩塊div在背對我們(Y軸翻轉180度)的時候都hidden
+                backface-visibility: hidden;
+                // 讓翻牌效果更深動
                 transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
                 transition-duration: 1s;
-                transition-property: transform, opacity;
+                transition-property: transform;
             }
 
             >.front {
@@ -305,7 +315,7 @@ p {
             >.back {
                 flex-direction: column;
                 position: absolute;
-                opacity: 0;
+                // 原本backDiv在FrontDiv的正下方要用  絕對定位+ top、left 讓他們重疊
                 top: 0px;
                 left: 0px;
                 width: 100%;
@@ -330,7 +340,6 @@ p {
                 }
 
                 >.back {
-                    opacity: 1;
                     transform: rotateY(0deg);
                 }
             }
@@ -345,12 +354,9 @@ p {
 
             >.front,
             >.back {
-                // display: flex;
                 color: white;
-                // width: inherit;
                 background-size: cover !important;
                 background-position: center !important;
-                // height: 220px;
                 height: 30vh;
                 padding: 1em 2em;
                 background: #565656;
@@ -365,6 +371,58 @@ p {
 
     .p-shadow {
         text-shadow: 0.75px 0.75px rgba(0, 0, 0, 0.02), 1.5px 1.5px rgba(0, 0, 0, 0.02), 2.25px 2.25px rgba(0, 0, 0, 0.02), 3px 3px rgba(0, 0, 0, 0.02), 0.075rem 0.075rem rgba(0, 0, 0, 0.02), 4.5px 4.5px rgba(0, 0, 0, 0.02), 5.25px 5.25px rgba(0, 0, 0, 0.02), 6px 6px rgba(0, 0, 0, 0.02), 6.75px 6.75px rgba(0, 0, 0, 0.02), 0.225rem 0.225rem rgba(0, 0, 0, 0.02), 7.5px 7.5px rgba(0, 0, 0, 0.02), 8.25px 8.25px rgba(0, 0, 0, 0.02), 9px 9px rgba(0, 0, 0, 0.02), 9.75px 9.75px rgba(0, 0, 0, 0.02), 0.325rem 0.325rem rgba(0, 0, 0, 0.02), 10.5px 10.5px rgba(0, 0, 0, 0.02), 11.25px 11.25px rgba(0, 0, 0, 0.02), 12px 12px rgba(0, 0, 0, 0.02), 12.75px 12.75px rgba(0, 0, 0, 0.02), 0.425rem 0.425rem rgba(0, 0, 0, 0.02);
+    }
+}
+
+// contact component
+#Contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    // 固定在螢幕右下角
+    position: fixed;
+    right: 3.5%;
+    bottom: 5%;
+    width: 3.5rem;
+    height: 3.5rem;
+    z-index: 99;
+    transition: all 0.35s ease-out;
+
+    svg {
+        fill: rgb(255, 255, 255);
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 2rem;
+        height: 2rem;
+        visibility: visible;
+        opacity: 1;
+        transition: all 1s ease-out;
+    }
+
+    &:hover:not(:focus) {
+        transition: all 0.3s ease-out;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    &:focus {
+        transition: all 0.3s ease-out;
+        border-radius: 20px;
+        width: 50%;
+        height: 50%;
+        right: 50%;
+        bottom: 50%;
+        transform: translate(50%, 50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 10000;
+
+        svg {
+            visibility: hidden;
+            opacity: 0;
+        }
     }
 }
 

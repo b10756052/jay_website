@@ -133,12 +133,12 @@ p {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  position: relative;
 }
 #Skill .container .card {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   box-shadow: 0 0 8px 1px rgba(133, 99, 99, 0.45);
   border-radius: 15px;
   flex: 1 1 250px;
@@ -149,18 +149,16 @@ p {
   transition-delay: 0.15s;
 }
 #Skill .container .card .titlebox {
-  position: relative;
+  position: absolute;
   top: -5vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #a3090c;
+  background-color: #ad0d10;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
-  transition: all 0.3s ease-in-out;
 }
 #Skill .container .card .titlebox h4, #Skill .container .card .titlebox .h4 {
-  position: relative;
   color: white;
   width: 17vw;
   height: 11.5vh;
@@ -175,17 +173,22 @@ p {
   }
 }
 #Skill .container .card .textbox {
-  position: relative;
   transition: all 0.3s ease;
   visibility: hidden;
   opacity: 0;
-  padding: 1rem;
 }
 #Skill .container .card .textbox p {
-  position: relative;
   margin: 0;
   padding: 0;
   font-size: 1rem;
+}
+#Skill .container .card .frontEndTextbox {
+  margin-top: 1.25rem;
+}
+@media screen and (max-width: 450px) {
+  #Skill .container .card .frontEndTextbox {
+    margin-top: 2.5rem;
+  }
 }
 #Skill .container .card:hover {
   transition: all 0.3s ease-in-out;
@@ -229,12 +232,14 @@ p {
 #Project .cardsBox {
   display: flex;
   flex-wrap: wrap;
+  perspective: 1300px;
 }
 #Project .cardsBox .flip {
   flex: 1 1 250px;
   cursor: pointer;
   margin: 1rem;
   position: relative;
+  transform-style: preserve-3d;
 }
 #Project .cardsBox .flip > .front,
 #Project .cardsBox .flip > .back {
@@ -242,9 +247,10 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  backface-visibility: hidden;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-duration: 1s;
-  transition-property: transform, opacity;
+  transition-property: transform;
 }
 #Project .cardsBox .flip > .front {
   transform: rotateY(0deg);
@@ -252,7 +258,6 @@ p {
 #Project .cardsBox .flip > .back {
   flex-direction: column;
   position: absolute;
-  opacity: 0;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -272,7 +277,6 @@ p {
   transform: rotateY(180deg);
 }
 #Project .cardsBox .flip:hover > .back {
-  opacity: 1;
   transform: rotateY(0deg);
 }
 #Project .cardsBox .flip {
@@ -292,6 +296,52 @@ p {
 }
 #Project .p-shadow {
   text-shadow: 0.75px 0.75px rgba(0, 0, 0, 0.02), 1.5px 1.5px rgba(0, 0, 0, 0.02), 2.25px 2.25px rgba(0, 0, 0, 0.02), 3px 3px rgba(0, 0, 0, 0.02), 0.075rem 0.075rem rgba(0, 0, 0, 0.02), 4.5px 4.5px rgba(0, 0, 0, 0.02), 5.25px 5.25px rgba(0, 0, 0, 0.02), 6px 6px rgba(0, 0, 0, 0.02), 6.75px 6.75px rgba(0, 0, 0, 0.02), 0.225rem 0.225rem rgba(0, 0, 0, 0.02), 7.5px 7.5px rgba(0, 0, 0, 0.02), 8.25px 8.25px rgba(0, 0, 0, 0.02), 9px 9px rgba(0, 0, 0, 0.02), 9.75px 9.75px rgba(0, 0, 0, 0.02), 0.325rem 0.325rem rgba(0, 0, 0, 0.02), 10.5px 10.5px rgba(0, 0, 0, 0.02), 11.25px 11.25px rgba(0, 0, 0, 0.02), 12px 12px rgba(0, 0, 0, 0.02), 12.75px 12.75px rgba(0, 0, 0, 0.02), 0.425rem 0.425rem rgba(0, 0, 0, 0.02);
+}
+
+#Contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  right: 3.5%;
+  bottom: 5%;
+  width: 3.5rem;
+  height: 3.5rem;
+  z-index: 99;
+  transition: all 0.35s ease-out;
+}
+#Contact svg {
+  fill: rgb(255, 255, 255);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2rem;
+  height: 2rem;
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s ease-out;
+}
+#Contact:hover:not(:focus) {
+  transition: all 0.3s ease-out;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#Contact:focus {
+  transition: all 0.3s ease-out;
+  border-radius: 20px;
+  width: 50%;
+  height: 50%;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+}
+#Contact:focus svg {
+  visibility: hidden;
+  opacity: 0;
 }
 
 :root {

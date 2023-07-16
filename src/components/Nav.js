@@ -102,11 +102,15 @@ const Nav = () => {
       setActiveClass("#navAAbout");
     } else if (position === "SkillPage") {
       setActiveClass("#navASkill");
-    } else if (position === "ProjectPage") {
+    } else {
       setActiveClass("#navAProject");
-    } else if (position === "ContactPage") {
-      setActiveClass("#navAContact");
     }
+    // else if (position === "ProjectPage") {
+    //   setActiveClass("#navAProject");
+    // }
+    // else if (position === "ContactPage") {
+    //   setActiveClass("#navAContact");
+    // }
   }, [position]);
 
   // 原本的判斷網頁position的funciont 觸發方式 (是根據毫秒且重複觸發而並不是根據scroll來觸發，且觸發後沒有內建卸載機制，綜合上述兩點會導致性能浪費)
@@ -188,7 +192,7 @@ const Nav = () => {
               >
                 Project
               </Link>
-              <Link
+              {/* <Link
                 id="navAContact"
                 duration={150}
                 smooth={true}
@@ -197,7 +201,7 @@ const Nav = () => {
                 to="Contact"
               >
                 Contact
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

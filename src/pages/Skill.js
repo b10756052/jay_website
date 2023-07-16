@@ -11,16 +11,19 @@ const Skill = () => {
             <h4 className="d-none d-lg-block">Front-End</h4>
             <h4 className="d-block d-lg-none">F-End</h4>
           </div>
-          <div className="textbox">
-            <p>-HTML / CSS</p>
-            <p>-Sass / SCSS</p>
-            <p>-Bootstrap</p>
+          <div className="textbox frontEndTextbox">
+            <p>- HTML / CSS</p>
+            <p>- Sass / SCSS</p>
+            <p>- Bootstrap</p>
             <p>
               - JavaScript <br />
               (熟悉基礎及 ES6 標準)
             </p>
-            <p>-React.js</p>
-            <p>-串接API (Axios / Fetch)</p>
+            <p>- React.js</p>
+            <p>
+              - 串接API <br />
+              (Axios / Fetch)
+            </p>
           </div>
         </div>
         {/* 後端 */}
@@ -30,10 +33,10 @@ const Skill = () => {
             <h4 className="d-block d-lg-none">B-End</h4>
           </div>
           <div className="textbox">
-            <p>-Node.js</p>
-            <p>-MongoDB、Mongoose</p>
+            <p>- Node.js</p>
+            <p>- MongoDB、Mongoose</p>
             <p>
-              -Node.js + Express
+              - Node.js + Express
               <br />
               建置RESTful API
             </p>
@@ -46,15 +49,15 @@ const Skill = () => {
           </div>
           <div className="textbox">
             <p>
-              -Netlify + Heroku
+              - Netlify + Heroku
               <br />
               GitHub Pages
               <br />
               部署網頁
             </p>
 
-            <p>-使用Git進行版本控制</p>
-            <p>-使用Postman進行API測試</p>
+            <p>- 使用Git進行版本控制</p>
+            <p>- 使用Postman測試API</p>
           </div>
         </div>
       </div>
