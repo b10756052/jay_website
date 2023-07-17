@@ -114,8 +114,7 @@ p {
   box-shadow: 0px 0px 20px 1px rgb(98, 98, 98);
 }
 
-#Skill,
-#Contact {
+#Skill {
   background-color: rgb(243, 243, 243);
 }
 
@@ -298,50 +297,141 @@ p {
   text-shadow: 0.75px 0.75px rgba(0, 0, 0, 0.02), 1.5px 1.5px rgba(0, 0, 0, 0.02), 2.25px 2.25px rgba(0, 0, 0, 0.02), 3px 3px rgba(0, 0, 0, 0.02), 0.075rem 0.075rem rgba(0, 0, 0, 0.02), 4.5px 4.5px rgba(0, 0, 0, 0.02), 5.25px 5.25px rgba(0, 0, 0, 0.02), 6px 6px rgba(0, 0, 0, 0.02), 6.75px 6.75px rgba(0, 0, 0, 0.02), 0.225rem 0.225rem rgba(0, 0, 0, 0.02), 7.5px 7.5px rgba(0, 0, 0, 0.02), 8.25px 8.25px rgba(0, 0, 0, 0.02), 9px 9px rgba(0, 0, 0, 0.02), 9.75px 9.75px rgba(0, 0, 0, 0.02), 0.325rem 0.325rem rgba(0, 0, 0, 0.02), 10.5px 10.5px rgba(0, 0, 0, 0.02), 11.25px 11.25px rgba(0, 0, 0, 0.02), 12px 12px rgba(0, 0, 0, 0.02), 12.75px 12.75px rgba(0, 0, 0, 0.02), 0.425rem 0.425rem rgba(0, 0, 0, 0.02);
 }
 
-#Contact {
+@media screen and (min-width: 1000px) {
+  .Contact svg {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .madeFocus {
+    width: 60% !important;
+    height: 60% !important;
+  }
+  .madeFocus textarea,
+  .madeFocus input {
+    width: 55% !important;
+  }
+  .madeFocus input {
+    height: 7%;
+  }
+  .madeFocus button {
+    width: 15% !important;
+  }
+  .madeFocus textarea {
+    height: 40%;
+  }
+}
+.Contact {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.35);
   position: fixed;
   right: 3.5%;
   bottom: 5%;
   width: 3.5rem;
   height: 3.5rem;
   z-index: 99;
-  transition: all 0.35s ease-out;
+  transition-delay: 0.2s;
+  transition: all 0.75s ease-in-out;
 }
-#Contact svg {
-  fill: rgb(255, 255, 255);
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 2rem;
-  height: 2rem;
+.Contact svg {
+  pointer-events: none;
   visibility: visible;
   opacity: 1;
-  transition: all 1s ease-out;
+  transition-delay: 3s;
+  transition: all 3.5s ease-out;
+  fill: rgb(255, 255, 255);
+  width: 2rem;
+  height: 2rem;
 }
-#Contact:hover:not(:focus) {
+.Contact .contactForm {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+.Contact:hover:not(:focus) {
   transition: all 0.3s ease-out;
   background-color: rgba(0, 0, 0, 0.8);
 }
-#Contact:focus {
-  transition: all 0.3s ease-out;
+
+.madeFocus {
+  transition: all 0.5s ease-in-out;
   border-radius: 20px;
-  width: 50%;
-  height: 50%;
+  width: 80%;
+  height: 70%;
   right: 50%;
   bottom: 50%;
   transform: translate(50%, 50%);
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 10000;
 }
-#Contact:focus svg {
-  visibility: hidden;
-  opacity: 0;
+.madeFocus:hover {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.madeFocusSvg {
+  transition: all 0.2s ease-out !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.madeFocusForm {
+  pointer-events: none;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95%;
+  width: 95%;
+  transition-delay: 0.2s;
+  transition: all 0.5s ease-in-out;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.madeFocusForm input,
+.madeFocusForm button,
+.madeFocusForm textarea {
+  color: white;
+  background-color: transparent;
+  pointer-events: all;
+  margin: 1rem;
+  padding: 0.25rem;
+}
+.madeFocusForm textarea,
+.madeFocusForm input {
+  width: 85%;
+}
+.madeFocusForm input {
+  height: 7%;
+  outline: none;
+  border: none;
+  border-bottom: 1px white solid;
+}
+.madeFocusForm button {
+  width: 40%;
+  border: 1px white solid;
+  border-radius: 10px;
+  padding: 0.5rem;
+  color: white;
+}
+.madeFocusForm textarea {
+  height: 40%;
+  outline: none;
+  border: 1px white solid;
+  border-radius: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 :root {
