@@ -15,6 +15,8 @@ const Contact = () => {
 
   const sendEmailFun = async (e) => {
     e.preventDefault();
+    // 用按鈕顯示loading訊息
+    e.target.children[3].innerText = "LOADING...";
     // 設置郵件參數
     const emailParams = {
       // 寄件人email、姓名、訊息內容
