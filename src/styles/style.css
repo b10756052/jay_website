@@ -9,6 +9,26 @@
   font-family: "Silkscreen", "CH";
 }
 
+#HomePhoto {
+  overflow: hidden;
+}
+
+#homepagePCDisplay {
+  display: block;
+}
+
+#homepagePhoneDisplay {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  #homepagePCDisplay {
+    display: none;
+  }
+  #homepagePhoneDisplay {
+    display: block;
+  }
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10.5px;

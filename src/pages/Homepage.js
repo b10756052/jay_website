@@ -9,6 +9,7 @@ const Homepage = () => {
     >
       {/* phone display */}
       <div
+        id="homepagePhoneDisplay"
         style={{
           width: "100vw",
           height: "100vh",
@@ -17,7 +18,7 @@ const Homepage = () => {
           backgroundImage:
             "url(https://images.unsplash.com/photo-1546900703-cf06143d1239?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1750&q=80)",
         }}
-        className="position-static   d-block d-lg-none  "
+        className="position-static   "
       >
         {/* mask */}
         <div
@@ -28,6 +29,7 @@ const Homepage = () => {
 
       {/* pc display*/}
       <div
+        id="homepagePCDisplay"
         style={{
           top: "0vh",
           bottom: "0vh",
@@ -36,7 +38,7 @@ const Homepage = () => {
           backgroundImage:
             "url(https://images.unsplash.com/photo-1546900703-cf06143d1239?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1750&q=80)",
         }}
-        className="position-absolute bg-lg-cover bg-attachment-fixed d-none d-lg-block  "
+        className="position-absolute bg-lg-cover bg-attachment-fixed   "
       >
         {/* mask */}
         <div

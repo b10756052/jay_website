@@ -12,6 +12,29 @@
             font-family: 'Silkscreen', "CH";
         }
 
+        // 主頁圖片根據PC、PHONE切換顯示
+        #HomePhoto {
+            overflow: hidden;
+        }
+
+        #homepagePCDisplay {
+            display: block;
+        }
+
+        #homepagePhoneDisplay {
+            display: none;
+        }
+
+        @media screen and (max-width:500px) {
+            #homepagePCDisplay {
+                display: none;
+            }
+
+            #homepagePhoneDisplay {
+                display: block;
+            }
+        }
+
         //scroll bar styling
         /* width */
 
@@ -549,81 +572,6 @@
             }
         }
 
-        // // backup code
-        // .madeFocus {
-        //     // transition: top 0.3s, bottom 0.3s, left 0.3s, right 0.3s, width 0.3s, height 0.3s, opacity 0.3s, border-radius 0.3s;
-        //     // try
-        //     -webkit-transform-style: preserve-3d;
-        //     will-change: transform;
-        //     -webkit-transform: translate3d(50%, 50%, 0);
-        //     //break
-        //     transition: all 0.5s ease-in-out;
-        //     border-radius: 20px;
-        //     width: 80%;
-        //     height: 70%;
-        //     right: 50%;
-        //     bottom: 50%;
-        //     // transform: translate(50%, 50%);
-        //     background-color: rgba(0, 0, 0, 0.8);
-        //     z-index: 10000;
-        //     &:hover {
-        //         background-color: rgba(0, 0, 0, 0.8) !important;
-        //     }
-        // }
-        // .madeFocusForm {
-        //     pointer-events: none;
-        //     position: relative;
-        //     top: 50%;
-        //     left: 50%;
-        //     // transform: translate(-50%, -50%);
-        //     display: flex;
-        //     flex-direction: column;
-        //     justify-content: center;
-        //     align-items: center;
-        //     height: 95%;
-        //     width: 95%;
-        //     // try
-        //     -webkit-transform-style: preserve-3d;
-        //     will-change: transform;
-        //     -webkit-transform: translate3d(-50%, -50%, 0);
-        //     //break
-        //     transition-delay: 1s;
-        //     transition: all 1.5s ease-in-out;
-        //     visibility: visible !important;
-        //     opacity: 1 !important;
-        //     input,
-        //     button,
-        //     textarea {
-        //         color: white;
-        //         background-color: transparent;
-        //         pointer-events: all;
-        //         margin: 1rem;
-        //         padding: 0.25rem;
-        //     }
-        //     textarea,
-        //     input {
-        //         width: 85%;
-        //     }
-        //     input {
-        //         height: 7%;
-        //         outline: none;
-        //         border: none;
-        //         border-bottom: 1px white solid;
-        //     }
-        //     button {
-        //         width: 40%;
-        //         border: 1px white solid;
-        //         border-radius: 10px;
-        //         padding: 0.5rem;
-        //         color: white
-        //     }
-        //     textarea {
-        //         height: 40%;
-        //         outline: none;
-        //         border: 1px white solid;
-        //         border-radius: 10px
-        //     }
-        // }
         .madeFocusSvg {
             transition: all 0.2s ease-out !important;
             visibility: hidden !important;
