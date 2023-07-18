@@ -417,6 +417,14 @@
             z-index: 99;
             transition-delay: 0.2s;
             transition: all 0.75s ease-in-out;
+            -webkit-transform: translate3d(0, 0, 0);
+            -webkit-transform-style: preserve-3d;
+            will-change: transform;
+            -webkit-backface-visibility: hidden;
+            -webkit-perspective: 1000;
+            -moz-perspective: 1000;
+            -ms-perspective: 1000;
+            perspective: 1000;
 
             svg {
                 pointer-events: none;
@@ -431,9 +439,17 @@
             }
 
             .contactForm {
+                -webkit-transform: translate3d(0, 0, 0);
                 position: absolute;
                 visibility: hidden;
                 opacity: 0;
+                -webkit-transform-style: preserve-3d;
+                will-change: transform;
+                -webkit-backface-visibility: hidden;
+                -webkit-perspective: 1000;
+                -moz-perspective: 1000;
+                -ms-perspective: 1000;
+                perspective: 1000;
             }
 
             &:hover:not(:focus) {
@@ -449,6 +465,11 @@
             -webkit-transform-style: preserve-3d;
             will-change: transform;
             -webkit-transform: translate3d(50%, 50%, 0);
+            -webkit-backface-visibility: hidden;
+            -webkit-perspective: 1000;
+            -moz-perspective: 1000;
+            -ms-perspective: 1000;
+            perspective: 1000;
             //break
             transition: all 0.5s ease-in-out;
             border-radius: 20px;
@@ -456,7 +477,6 @@
             height: 70%;
             right: 50%;
             bottom: 50%;
-            // transform: translate(50%, 50%);
             background-color: rgba(0, 0, 0, 0.8);
             z-index: 10000;
 
@@ -479,7 +499,12 @@
             // try
             -webkit-transform-style: preserve-3d;
             will-change: transform;
-            -webkit-transform: translate3d(-50%, -50%, 0);
+            -webkit-transform: translate3d(-50%, -50%, 0) !important;
+            -webkit-backface-visibility: hidden;
+            -webkit-perspective: 1000;
+            -moz-perspective: 1000;
+            -ms-perspective: 1000;
+            perspective: 1000;
             //break
             transition-delay: 1s;
             transition: all 1.5s ease-in-out;
@@ -524,6 +549,81 @@
             }
         }
 
+        // // backup code
+        // .madeFocus {
+        //     // transition: top 0.3s, bottom 0.3s, left 0.3s, right 0.3s, width 0.3s, height 0.3s, opacity 0.3s, border-radius 0.3s;
+        //     // try
+        //     -webkit-transform-style: preserve-3d;
+        //     will-change: transform;
+        //     -webkit-transform: translate3d(50%, 50%, 0);
+        //     //break
+        //     transition: all 0.5s ease-in-out;
+        //     border-radius: 20px;
+        //     width: 80%;
+        //     height: 70%;
+        //     right: 50%;
+        //     bottom: 50%;
+        //     // transform: translate(50%, 50%);
+        //     background-color: rgba(0, 0, 0, 0.8);
+        //     z-index: 10000;
+        //     &:hover {
+        //         background-color: rgba(0, 0, 0, 0.8) !important;
+        //     }
+        // }
+        // .madeFocusForm {
+        //     pointer-events: none;
+        //     position: relative;
+        //     top: 50%;
+        //     left: 50%;
+        //     // transform: translate(-50%, -50%);
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     align-items: center;
+        //     height: 95%;
+        //     width: 95%;
+        //     // try
+        //     -webkit-transform-style: preserve-3d;
+        //     will-change: transform;
+        //     -webkit-transform: translate3d(-50%, -50%, 0);
+        //     //break
+        //     transition-delay: 1s;
+        //     transition: all 1.5s ease-in-out;
+        //     visibility: visible !important;
+        //     opacity: 1 !important;
+        //     input,
+        //     button,
+        //     textarea {
+        //         color: white;
+        //         background-color: transparent;
+        //         pointer-events: all;
+        //         margin: 1rem;
+        //         padding: 0.25rem;
+        //     }
+        //     textarea,
+        //     input {
+        //         width: 85%;
+        //     }
+        //     input {
+        //         height: 7%;
+        //         outline: none;
+        //         border: none;
+        //         border-bottom: 1px white solid;
+        //     }
+        //     button {
+        //         width: 40%;
+        //         border: 1px white solid;
+        //         border-radius: 10px;
+        //         padding: 0.5rem;
+        //         color: white
+        //     }
+        //     textarea {
+        //         height: 40%;
+        //         outline: none;
+        //         border: 1px white solid;
+        //         border-radius: 10px
+        //     }
+        // }
         .madeFocusSvg {
             transition: all 0.2s ease-out !important;
             visibility: hidden !important;

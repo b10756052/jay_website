@@ -10,20 +10,19 @@ const Homepage = () => {
       {/* phone display */}
       <div
         style={{
-          top: "0vh",
-          bottom: "0vh",
-          left: "0vh",
-          right: "0vh",
+          width: "100vw",
+          height: "100vh",
           objectFit: "cover",
+          backgroundPosition: "center",
           backgroundImage:
             "url(https://images.unsplash.com/photo-1546900703-cf06143d1239?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1750&q=80)",
         }}
-        className="position-absolute  d-block d-lg-none  "
+        className="position-static   d-block d-lg-none  "
       >
         {/* mask */}
         <div
           className="w-100 h-100"
-          style={{ zIndex: "1000", backgroundColor: "rgba(0,0,0,0.35)" }}
+          style={{ zIndex: "1000", backgroundColor: "rgba(0,0,0,0.6)" }}
         ></div>
       </div>
 

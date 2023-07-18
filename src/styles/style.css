@@ -339,6 +339,12 @@ p {
   z-index: 99;
   transition-delay: 0.2s;
   transition: all 0.75s ease-in-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  -ms-perspective: 1000;
+  perspective: 1000;
 }
 .Contact svg {
   pointer-events: none;
@@ -351,9 +357,15 @@ p {
   height: 2rem;
 }
 .Contact .contactForm {
+  -webkit-transform: translate3d(0, 0, 0);
   position: absolute;
   visibility: hidden;
   opacity: 0;
+  -webkit-transform-style: preserve-3d;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  -ms-perspective: 1000;
+  perspective: 1000;
 }
 .Contact:hover:not(:focus) {
   transition: all 0.3s ease-out;
@@ -364,6 +376,9 @@ p {
   -webkit-transform-style: preserve-3d;
   will-change: transform;
   -webkit-transform: translate3d(50%, 50%, 0);
+  -webkit-backface-visibility: hidden;
+  -ms-perspective: 1000;
+  perspective: 1000;
   transition: all 0.5s ease-in-out;
   border-radius: 20px;
   width: 80%;
@@ -390,7 +405,10 @@ p {
   width: 95%;
   -webkit-transform-style: preserve-3d;
   will-change: transform;
-  -webkit-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0) !important;
+  -webkit-backface-visibility: hidden;
+  -ms-perspective: 1000;
+  perspective: 1000;
   transition-delay: 1s;
   transition: all 1.5s ease-in-out;
   visibility: visible !important;
