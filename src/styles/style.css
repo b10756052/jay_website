@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   font-family: "Silkscreen", "CH";
+  -webkit-backface-visibility: hidden !important;
 }
 
 #HomePhoto {
@@ -320,6 +321,46 @@ p {
   text-shadow: 0.75px 0.75px rgba(0, 0, 0, 0.02), 1.5px 1.5px rgba(0, 0, 0, 0.02), 2.25px 2.25px rgba(0, 0, 0, 0.02), 3px 3px rgba(0, 0, 0, 0.02), 0.075rem 0.075rem rgba(0, 0, 0, 0.02), 4.5px 4.5px rgba(0, 0, 0, 0.02), 5.25px 5.25px rgba(0, 0, 0, 0.02), 6px 6px rgba(0, 0, 0, 0.02), 6.75px 6.75px rgba(0, 0, 0, 0.02), 0.225rem 0.225rem rgba(0, 0, 0, 0.02), 7.5px 7.5px rgba(0, 0, 0, 0.02), 8.25px 8.25px rgba(0, 0, 0, 0.02), 9px 9px rgba(0, 0, 0, 0.02), 9.75px 9.75px rgba(0, 0, 0, 0.02), 0.325rem 0.325rem rgba(0, 0, 0, 0.02), 10.5px 10.5px rgba(0, 0, 0, 0.02), 11.25px 11.25px rgba(0, 0, 0, 0.02), 12px 12px rgba(0, 0, 0, 0.02), 12.75px 12.75px rgba(0, 0, 0, 0.02), 0.425rem 0.425rem rgba(0, 0, 0, 0.02);
 }
 
+@media screen and (min-width: 500px) {
+  .contactForm {
+    margin-top: -80% !important;
+    margin-left: -50% !important;
+  }
+  .madeFocus {
+    margin-bottom: -60% !important;
+  }
+}
+@media screen and (min-width: 600px) {
+  .contactForm {
+    margin-top: -60% !important;
+    margin-left: -50% !important;
+  }
+  .madeFocus {
+    margin-bottom: -50% !important;
+  }
+}
+@media screen and (min-width: 700px) {
+  .contactForm {
+    margin-top: -55% !important;
+  }
+  .madeFocus {
+    margin-bottom: -40% !important;
+  }
+}
+@media screen and (min-width: 800px) {
+  .contactForm {
+    margin-top: -50% !important;
+    margin-left: -50% !important;
+  }
+}
+@media screen and (min-width: 900px) {
+  .contactForm {
+    margin-top: -45% !important;
+  }
+  .madeFocus {
+    margin-bottom: -40% !important;
+  }
+}
 @media screen and (min-width: 1000px) {
   .Contact svg {
     position: relative;
@@ -328,8 +369,7 @@ p {
     transform: translate(-50%, -50%);
   }
   .madeFocus {
-    width: 60% !important;
-    height: 60% !important;
+    margin-bottom: -20% !important;
   }
   .madeFocus textarea,
   .madeFocus input {
@@ -344,6 +384,12 @@ p {
   .madeFocus textarea {
     height: 40%;
   }
+  .contactForm {
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: -22% !important;
+    margin-left: -50% !important;
+  }
 }
 .Contact {
   display: flex;
@@ -357,14 +403,8 @@ p {
   width: 3.5rem;
   height: 3.5rem;
   z-index: 99;
-  transition-delay: 0.2s;
-  transition: all 0.75s ease-in-out;
-  -webkit-transform: translate3d(0, 0, 0);
-  -webkit-transform-style: preserve-3d;
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-  -ms-perspective: 1000;
-  perspective: 1000;
+  transition-delay: 0.5s;
+  transition: all 1s ease-in-out;
 }
 .Contact svg {
   pointer-events: none;
@@ -377,15 +417,11 @@ p {
   height: 2rem;
 }
 .Contact .contactForm {
-  -webkit-transform: translate3d(0, 0, 0);
+  transition-property: opacity;
+  transition-duration: 1s;
   position: absolute;
   visibility: hidden;
   opacity: 0;
-  -webkit-transform-style: preserve-3d;
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-  -ms-perspective: 1000;
-  perspective: 1000;
 }
 .Contact:hover:not(:focus) {
   transition: all 0.3s ease-out;
@@ -393,26 +429,22 @@ p {
 }
 
 .madeFocus {
-  -webkit-transform-style: preserve-3d;
-  will-change: transform;
-  -webkit-transform: translate3d(50%, 50%, 0);
-  -webkit-backface-visibility: hidden;
-  -ms-perspective: 1000;
-  perspective: 1000;
-  transition: all 0.5s ease-in-out;
   border-radius: 20px;
-  width: 80%;
-  height: 70%;
+  width: 80vw;
+  height: 70vh;
   right: 50%;
   bottom: 50%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 10000;
+  margin-right: -40%;
+  margin-bottom: -75%;
 }
 .madeFocus:hover {
   background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
 .madeFocusForm {
+  padding: 1rem;
   pointer-events: none;
   position: relative;
   top: 50%;
@@ -421,16 +453,13 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 95%;
-  width: 95%;
-  -webkit-transform-style: preserve-3d;
-  will-change: transform;
-  -webkit-transform: translate3d(-50%, -50%, 0) !important;
-  -webkit-backface-visibility: hidden;
-  -ms-perspective: 1000;
-  perspective: 1000;
-  transition-delay: 1s;
-  transition: all 1.5s ease-in-out;
+  height: 100%;
+  width: 100%;
+  margin-top: -90%;
+  margin-left: -50%;
+  transition-delay: 0.3s;
+  transition-property: transform, opacity, left, top, bottom, right;
+  transition-duration: 1.5s;
   visibility: visible !important;
   opacity: 1 !important;
 }
