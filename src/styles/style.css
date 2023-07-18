@@ -361,6 +361,7 @@ p {
 }
 
 .madeFocus {
+  -webkit-transform-style: preserve-3d;
   will-change: transform;
   -webkit-transform: translate3d(50%, 50%, 0);
   transition: all 0.5s ease-in-out;
@@ -376,12 +377,6 @@ p {
   background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
-.madeFocusSvg {
-  transition: all 0.2s ease-out !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-}
-
 .madeFocusForm {
   pointer-events: none;
   position: relative;
@@ -393,6 +388,7 @@ p {
   align-items: center;
   height: 95%;
   width: 95%;
+  -webkit-transform-style: preserve-3d;
   will-change: transform;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transition-delay: 1s;
@@ -431,6 +427,12 @@ p {
   outline: none;
   border: 1px white solid;
   border-radius: 10px;
+}
+
+.madeFocusSvg {
+  transition: all 0.2s ease-out !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
 :root {
