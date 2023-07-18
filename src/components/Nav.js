@@ -135,8 +135,9 @@ const Nav = () => {
           >
             JayResume
           </Link>
+          {/* 手機nav bar button */}
           <button
-            class="navbar-toggler"
+            class="navbar-toggler navBarButton"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNavAltMarkup"
@@ -192,16 +193,6 @@ const Nav = () => {
               >
                 Project
               </Link>
-              {/* <Link
-                id="navAContact"
-                duration={150}
-                smooth={true}
-                offset={-87}
-                class="nav-link mx-2 py-1 text-center"
-                to="Contact"
-              >
-                Contact
-              </Link> */}
             </div>
           </div>
         </div>

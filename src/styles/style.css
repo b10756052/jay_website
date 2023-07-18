@@ -64,8 +64,11 @@ p {
   transition: all 0.5s ease;
 }
 
-#navAProject {
-  margin-right: 1.3rem !important;
+.navBarButton {
+  border: none !important;
+}
+.navBarButton:focus {
+  box-shadow: none !important;
 }
 
 .fixed-top {
@@ -390,8 +393,8 @@ p {
   align-items: center;
   height: 95%;
   width: 95%;
-  transition-delay: 0.2s;
-  transition: all 0.5s ease-in-out;
+  transition-delay: 1s;
+  transition: all 1.5s ease-in-out;
   visibility: visible !important;
   opacity: 1 !important;
 }
@@ -426,12 +429,6 @@ p {
   outline: none;
   border: 1px white solid;
   border-radius: 10px;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 :root {

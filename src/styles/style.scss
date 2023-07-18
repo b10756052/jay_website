@@ -1,579 +1,565 @@
-@font-face {
-    font-family: 'CH'; // 名稱可以自定義
-    src: url(../ttf/Cubic_11_1.013_R.ttf); // 下載的字體檔案路徑
-}
+        @font-face {
+            font-family: 'CH'; // 名稱可以自定義
+            src: url(../ttf/Cubic_11_1.013_R.ttf); // 下載的字體檔案路徑
+        }
 
-// #HomePhoto,
-// #NavBar {
-//     font-family: 'Silkscreen', "CH",
-// }
-// body {
-//     font-family: 'Noto Sans TC', sans-serif;
-// }
-* {
-    margin: 0;
-    padding: 0;
-    // box-sizing: border-box;
-    // font-family: 'Noto Sans TC', sans-serif;
-    // font-family: 'Silkscreen', Noto Sans TC;
-    font-family: 'Silkscreen', "CH";
-}
+        * {
+            margin: 0;
+            padding: 0;
+            // box-sizing: border-box;
+            // font-family: 'Noto Sans TC', sans-serif;
+            // font-family: 'Silkscreen', Noto Sans TC;
+            font-family: 'Silkscreen', "CH";
+        }
 
-//scroll bar
+        //scroll bar styling
+        /* width */
 
-/* width */
+        ::-webkit-scrollbar {
+            // width: 0px !important;
+            width: 10.5px;
+        }
 
-::-webkit-scrollbar {
-    // width: 0px !important;
-    width: 10.5px;
-}
+        /* Track */
 
+        ::-webkit-scrollbar-track {
+            // border-radius: 10px;
+        }
 
-/* Track */
+        /* Handle */
 
-::-webkit-scrollbar-track {
-    // border-radius: 10px;
-    // background: transparent;
-}
+        ::-webkit-scrollbar-thumb {
+            background: #8e0103;
+            // border-radius: 10px;
+        }
 
+        /* Handle on hover */
 
-/* Handle */
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(194, 22, 22);
+        }
 
-::-webkit-scrollbar-thumb {
-    background: #8e0103;
-    // border-radius: 10px;
-}
+        // nav page process
+        .scrollNotTop {
+            background-color: rgb(0, 0, 0);
+            box-shadow: 3px 1px 3px rgba(255, 255, 255, 0.3);
+        }
 
-
-/* Handle on hover */
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(194, 22, 22);
-}
-
-// nav page process
-.scrollNotTop {
-    background-color: rgb(0, 0, 0);
-    box-shadow: 3px 1px 3px rgba(255, 255, 255, 0.3);
-}
-
-.nav-link::after {
-    content: '';
-    margin-top: 2.5px;
-    display: flex;
-    border-bottom: solid 1px #8e0103;
-    transform: scaleX(0);
-    transition: transform 0.25s ease-in-out;
-}
-
-.active::after {
-    transform: scaleY(3);
-}
-
-p {
-    font-size: 1.15rem;
-    line-height: 1.85;
-}
-
-// 導覽列JAYRESUME字樣
-#navA {
-    cursor: grabbing;
-}
-
-#navAHome,
-#navAAbout,
-#navASkill,
-#navAProject,
-#navAContact {
-    width: 105px;
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-    transition: all 0.5s ease;
-}
-
-#navAProject {
-    margin-right: 1.3rem !important;
-}
-
-.fixed-top {
-    transition: all 0.5s ease;
-}
-
-#navbarNavAltMarkup {
-    transition: all 0.5s ease;
-}
-
-.bg-lg-cover {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.bg-attachment-fixed {
-    background-attachment: fixed;
-}
-
-.object-fit-cover {
-    object-fit: cover;
-}
-
-// AboutPage's LoadMore Button
-#AboutButton {
-    transition: all 0.3s ease;
-    box-shadow: 0px 0px 1.75px 2px #8e0103;
-    border: none;
-}
-
-// AboutPage's LoadMore Button切換顯示的文字
-.hidden {
-    transition: max-height 0.4s ease;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-}
-
-.hidden.open {
-    transition: all 1.5s ease-in-out;
-    opacity: 1;
-    max-height: 700px;
-}
-
-.ResumePhoto {
-    box-shadow: 0px 0px 20px 1px rgb(98, 98, 98);
-}
-
-// pages頁面白灰白灰錯開顯示
-#Skill {
-    background-color: rgb(243, 243, 243)
-}
-
-// skill page
-#Skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    padding: 3rem 0rem 3rem 0rem;
-
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        .card {
-            position: relative;
+        .nav-link::after {
+            content: '';
+            margin-top: 2.5px;
             display: flex;
+            border-bottom: solid 1px #8e0103;
+            transform: scaleX(0);
+            transition: transform 0.25s ease-in-out;
+        }
+
+        .active::after {
+            transform: scaleY(3);
+        }
+
+        p {
+            font-size: 1.15rem;
+            line-height: 1.85;
+        }
+
+        // 導覽列JAYRESUME字樣
+        #navA {
+            cursor: grabbing;
+        }
+
+        #navAHome,
+        #navAAbout,
+        #navASkill,
+        #navAProject,
+        #navAContact {
+            width: 105px;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.5s ease;
+        }
+
+        // 手機板的navbarbtn
+        .navBarButton {
+            border: none !important;
+
+            &:focus {
+                box-shadow: none !important;
+            }
+        }
+
+        .fixed-top {
+            transition: all 0.5s ease;
+        }
+
+        #navbarNavAltMarkup {
+            transition: all 0.5s ease;
+        }
+
+        .bg-lg-cover {
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .bg-attachment-fixed {
+            background-attachment: fixed;
+        }
+
+        .object-fit-cover {
+            object-fit: cover;
+        }
+
+        // AboutPage's LoadMore Button
+        #AboutButton {
+            transition: all 0.3s ease;
+            box-shadow: 0px 0px 1.75px 2px #8e0103;
+            border: none;
+        }
+
+        // AboutPage's LoadMore Button切換顯示的文字
+        .hidden {
+            transition: max-height 0.4s ease;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .hidden.open {
+            transition: all 1.5s ease-in-out;
+            opacity: 1;
+            max-height: 700px;
+        }
+
+        .ResumePhoto {
+            box-shadow: 0px 0px 20px 1px rgb(98, 98, 98);
+        }
+
+        // pages頁面白灰白灰錯開顯示
+        #Skill {
+            background-color: rgb(243, 243, 243)
+        }
+
+        // skill page
+        #Skill {
+            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 8px 1px rgba(133, 99, 99, 0.45);
-            border-radius: 15px;
-            flex: 1 1 250px;
-            margin: 3rem 1rem;
-            width: 25vw;
-            height: 20vh;
-            transition: all 0.3s ease-in-out;
-            transition-delay: 0.15s;
+            flex-wrap: wrap;
+            text-align: center;
+            padding: 3rem 0rem 3rem 0rem;
 
-            .titlebox {
-                position: absolute;
-                top: -5vh;
+            .container {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #ad0d10;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-                border-radius: 10px;
+                flex-wrap: wrap;
 
-                h4 {
-                    color: white;
-                    width: 17vw;
-                    height: 11.5vh;
-                    line-height: 11.5vh;
-                    font-size: 1.25rem;
-                }
+                .card {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0 0 8px 1px rgba(133, 99, 99, 0.45);
+                    border-radius: 15px;
+                    flex: 1 1 250px;
+                    margin: 3rem 1rem;
+                    width: 25vw;
+                    height: 20vh;
+                    transition: all 0.3s ease-in-out;
+                    transition-delay: 0.15s;
 
-                @media screen and (max-width:450px) {
-                    h4 {
-                        width: 15vh;
-                        height: 13vh;
-                        line-height: 13vh;
+                    .titlebox {
+                        position: absolute;
+                        top: -5vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #ad0d10;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                        border-radius: 10px;
+
+                        h4 {
+                            color: white;
+                            width: 17vw;
+                            height: 11.5vh;
+                            line-height: 11.5vh;
+                            font-size: 1.25rem;
+                        }
+
+                        @media screen and (max-width:450px) {
+                            h4 {
+                                width: 15vh;
+                                height: 13vh;
+                                line-height: 13vh;
+                            }
+                        }
+                    }
+
+                    .textbox {
+                        transition: all 0.3s ease;
+                        visibility: hidden;
+                        opacity: 0;
+
+                        p {
+                            margin: 0;
+                            padding: 0;
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .frontEndTextbox {
+                        margin-top: 1.25rem;
+                    }
+
+                    @media screen and (max-width:450px) {
+                        .frontEndTextbox {
+                            margin-top: 2.5rem;
+                        }
+                    }
+
+                    &:hover {
+                        transition: all 0.3s ease-in-out;
+                        height: 400px;
+
+                        .textbox {
+                            transition: all 0.3s ease;
+                            transition-delay: 0.3s;
+                            visibility: visible;
+                            opacity: 1;
+                        }
                     }
                 }
             }
+        }
 
-            .textbox {
-                transition: all 0.3s ease;
+        // project page
+        // https://codepen.io/aron-tw/pen/pLJqgE <-- 參考網址
+        #Project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            padding: 2rem 0rem 2rem 0rem;
+
+            .ProjectPageTitle {
+                padding: 0rem 1rem 0rem 1rem;
+                flex-wrap: wrap;
+                font-size: 3rem;
+            }
+
+            .projectLine {
+                width: 80vw;
+                height: 5.5px;
+                background-color: #8e0103e8;
+                border-radius: 10px;
+                margin: 2rem 0;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            }
+
+            .cardFrontH1 {
+                font-size: 2em;
+                // color: rgb(43, 41, 41);
+                // background-color: antiquewhite;
+                // background-color: #8e010394;
+                background-color: #1f1d1d;
+                border-radius: 20px;
+                width: 1000px;
+            }
+
+            .cardsBox {
+                display: flex;
+                flex-wrap: wrap;
+                // 視距 (比較能以肉眼狀態看到三維空間)
+                perspective: 1300px;
+
+                // base
+                .flip {
+                    flex: 1 1 250px;
+                    cursor: pointer;
+                    margin: 1rem;
+                    position: relative;
+                    // 翻轉時創造三維空間
+                    transform-style: preserve-3d;
+
+                    >.front,
+                    >.back {
+                        box-shadow: 0px 0px 10px 2px #2c2c2c;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        // 讓前、後兩塊div在背對我們(Y軸翻轉180度)的時候都hidden
+                        backface-visibility: hidden;
+                        // 讓翻牌效果更深動
+                        transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+                        transition-duration: 1s;
+                        transition-property: transform;
+                    }
+
+                    >.front {
+                        transform: rotateY(0deg);
+                    }
+
+                    >.back {
+                        flex-direction: column;
+                        position: absolute;
+                        // 原本backDiv在FrontDiv的正下方要用  絕對定位+ top、left 讓他們重疊
+                        top: 0px;
+                        left: 0px;
+                        width: 100%;
+                        height: 100%;
+                        transform: rotateY(-180deg);
+
+                        h2 {
+                            font-size: 1.5rem;
+                            line-height: 70%;
+                        }
+
+                        p {
+                            text-align: center;
+                            font-size: 0.9rem;
+                            color: #e7e6e6;
+                        }
+                    }
+
+                    &:hover {
+                        >.front {
+                            transform: rotateY(180deg);
+                        }
+
+                        >.back {
+                            transform: rotateY(0deg);
+                        }
+                    }
+                }
+
+                // custom
+                .flip {
+                    position: relative;
+                    display: inline-block;
+                    // width: 340px;
+                    width: 23vw;
+
+                    >.front,
+                    >.back {
+                        color: white;
+                        background-size: cover !important;
+                        background-position: center !important;
+                        height: 30vh;
+                        padding: 1em 2em;
+                        background: #565656;
+                        border-radius: 10px;
+                    }
+                }
+
+                // .p-shadow {
+                //     text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+                // }
+            }
+
+            .p-shadow {
+                text-shadow: 0.75px 0.75px rgba(0, 0, 0, 0.02), 1.5px 1.5px rgba(0, 0, 0, 0.02), 2.25px 2.25px rgba(0, 0, 0, 0.02), 3px 3px rgba(0, 0, 0, 0.02), 0.075rem 0.075rem rgba(0, 0, 0, 0.02), 4.5px 4.5px rgba(0, 0, 0, 0.02), 5.25px 5.25px rgba(0, 0, 0, 0.02), 6px 6px rgba(0, 0, 0, 0.02), 6.75px 6.75px rgba(0, 0, 0, 0.02), 0.225rem 0.225rem rgba(0, 0, 0, 0.02), 7.5px 7.5px rgba(0, 0, 0, 0.02), 8.25px 8.25px rgba(0, 0, 0, 0.02), 9px 9px rgba(0, 0, 0, 0.02), 9.75px 9.75px rgba(0, 0, 0, 0.02), 0.325rem 0.325rem rgba(0, 0, 0, 0.02), 10.5px 10.5px rgba(0, 0, 0, 0.02), 11.25px 11.25px rgba(0, 0, 0, 0.02), 12px 12px rgba(0, 0, 0, 0.02), 12.75px 12.75px rgba(0, 0, 0, 0.02), 0.425rem 0.425rem rgba(0, 0, 0, 0.02);
+            }
+        }
+
+        @media screen and (min-width:1000px) {
+
+            // pc contact component RWD
+            .Contact {
+                svg {
+                    position: relative;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .madeFocus {
+                width: 60% !important;
+                height: 60% !important;
+
+                textarea,
+                input {
+                    width: 55% !important;
+                }
+
+                input {
+                    height: 7%;
+                }
+
+                button {
+                    width: 15% !important;
+                }
+
+                textarea {
+                    height: 40%;
+                }
+            }
+        }
+
+        // mobile contact page
+        .Contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.35);
+            // 固定在螢幕右下角
+            position: fixed;
+            right: 3.5%;
+            bottom: 5%;
+            width: 3.5rem;
+            height: 3.5rem;
+            z-index: 99;
+            transition-delay: 0.2s;
+            transition: all 0.75s ease-in-out;
+
+            svg {
+                pointer-events: none;
+                visibility: visible;
+                opacity: 1;
+                transition-delay: 3s;
+                transition: all 3.5s ease-out;
+                // transition: all 1.2s ease-out;
+                fill: rgb(255, 255, 255);
+                width: 2rem;
+                height: 2rem;
+            }
+
+            .contactForm {
+                position: absolute;
                 visibility: hidden;
                 opacity: 0;
-
-                p {
-                    margin: 0;
-                    padding: 0;
-                    font-size: 1rem;
-                }
             }
 
-            .frontEndTextbox {
-                margin-top: 1.25rem;
+            &:hover:not(:focus) {
+                transition: all 0.3s ease-out;
+                background-color: rgba(0, 0, 0, 0.8);
             }
+        }
 
-            @media screen and (max-width:450px) {
-                .frontEndTextbox {
-                    margin-top: 2.5rem;
-                }
-            }
+        .madeFocus {
+            // transition: top 0.3s, bottom 0.3s, left 0.3s, right 0.3s, width 0.3s, height 0.3s, opacity 0.3s, border-radius 0.3s;
+            transition: all 0.5s ease-in-out;
+            border-radius: 20px;
+            width: 80%;
+            height: 70%;
+            right: 50%;
+            bottom: 50%;
+            transform: translate(50%, 50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 10000;
 
             &:hover {
-                transition: all 0.3s ease-in-out;
-                height: 400px;
-
-                .textbox {
-                    transition: all 0.3s ease;
-                    transition-delay: 0.3s;
-                    visibility: visible;
-                    opacity: 1;
-                }
-            }
-        }
-    }
-}
-
-// project page
-// https://codepen.io/aron-tw/pen/pLJqgE <-- 參考網址
-#Project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    padding: 2rem 0rem 2rem 0rem;
-
-    .ProjectPageTitle {
-        padding: 0rem 1rem 0rem 1rem;
-        flex-wrap: wrap;
-        font-size: 3rem;
-    }
-
-    .projectLine {
-        width: 80vw;
-        height: 5.5px;
-        background-color: #8e0103e8;
-        border-radius: 10px;
-        margin: 2rem 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .cardFrontH1 {
-        font-size: 2em;
-        // color: rgb(43, 41, 41);
-        // background-color: antiquewhite;
-        // background-color: #8e010394;
-        background-color: #1f1d1d;
-        border-radius: 20px;
-        width: 1000px;
-    }
-
-    .cardsBox {
-        display: flex;
-        flex-wrap: wrap;
-        // 視距 (比較能以肉眼狀態看到三維空間)
-        perspective: 1300px;
-
-        // base
-        .flip {
-            flex: 1 1 250px;
-            cursor: pointer;
-            margin: 1rem;
-            position: relative;
-            // 翻轉時創造三維空間
-            transform-style: preserve-3d;
-
-            >.front,
-            >.back {
-                box-shadow: 0px 0px 10px 2px #2c2c2c;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                // 讓前、後兩塊div在背對我們(Y軸翻轉180度)的時候都hidden
-                backface-visibility: hidden;
-                // 讓翻牌效果更深動
-                transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
-                transition-duration: 1s;
-                transition-property: transform;
-            }
-
-            >.front {
-                transform: rotateY(0deg);
-            }
-
-            >.back {
-                flex-direction: column;
-                position: absolute;
-                // 原本backDiv在FrontDiv的正下方要用  絕對定位+ top、left 讓他們重疊
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                height: 100%;
-                transform: rotateY(-180deg);
-
-                h2 {
-                    font-size: 1.5rem;
-                    line-height: 70%;
-                }
-
-                p {
-                    text-align: center;
-                    font-size: 0.9rem;
-                    color: #e7e6e6;
-                }
-            }
-
-            &:hover {
-                >.front {
-                    transform: rotateY(180deg);
-                }
-
-                >.back {
-                    transform: rotateY(0deg);
-                }
+                background-color: rgba(0, 0, 0, 0.8) !important;
             }
         }
 
-        // custom
-        .flip {
-            position: relative;
-            display: inline-block;
-            // width: 340px;
-            width: 23vw;
-
-            >.front,
-            >.back {
-                color: white;
-                background-size: cover !important;
-                background-position: center !important;
-                height: 30vh;
-                padding: 1em 2em;
-                background: #565656;
-                border-radius: 10px;
-            }
+        .madeFocusSvg {
+            transition: all 0.2s ease-out !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
         }
 
-        // .p-shadow {
-        //     text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
-        // }
-    }
-
-    .p-shadow {
-        text-shadow: 0.75px 0.75px rgba(0, 0, 0, 0.02), 1.5px 1.5px rgba(0, 0, 0, 0.02), 2.25px 2.25px rgba(0, 0, 0, 0.02), 3px 3px rgba(0, 0, 0, 0.02), 0.075rem 0.075rem rgba(0, 0, 0, 0.02), 4.5px 4.5px rgba(0, 0, 0, 0.02), 5.25px 5.25px rgba(0, 0, 0, 0.02), 6px 6px rgba(0, 0, 0, 0.02), 6.75px 6.75px rgba(0, 0, 0, 0.02), 0.225rem 0.225rem rgba(0, 0, 0, 0.02), 7.5px 7.5px rgba(0, 0, 0, 0.02), 8.25px 8.25px rgba(0, 0, 0, 0.02), 9px 9px rgba(0, 0, 0, 0.02), 9.75px 9.75px rgba(0, 0, 0, 0.02), 0.325rem 0.325rem rgba(0, 0, 0, 0.02), 10.5px 10.5px rgba(0, 0, 0, 0.02), 11.25px 11.25px rgba(0, 0, 0, 0.02), 12px 12px rgba(0, 0, 0, 0.02), 12.75px 12.75px rgba(0, 0, 0, 0.02), 0.425rem 0.425rem rgba(0, 0, 0, 0.02);
-    }
-}
-
-@media screen and (min-width:1000px) {
-
-    // pc contact component RWD
-    .Contact {
-        svg {
+        .madeFocusForm {
+            pointer-events: none;
             position: relative;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 95%;
+            width: 95%;
+            transition-delay: 1s;
+            transition: all 1.5s ease-in-out;
+            visibility: visible !important;
+            opacity: 1 !important;
+
+            input,
+            button,
+            textarea {
+                color: white;
+                background-color: transparent;
+                pointer-events: all;
+                margin: 1rem;
+                padding: 0.25rem;
+            }
+
+            textarea,
+            input {
+                width: 85%;
+            }
+
+            input {
+                height: 7%;
+                outline: none;
+                border: none;
+                border-bottom: 1px white solid;
+            }
+
+            button {
+                width: 40%;
+                border: 1px white solid;
+                border-radius: 10px;
+                padding: 0.5rem;
+                color: white
+            }
+
+            textarea {
+                height: 40%;
+                outline: none;
+                border: 1px white solid;
+                border-radius: 10px
+            }
         }
-    }
 
-    .madeFocus {
-        width: 60% !important;
-        height: 60% !important;
-
-        textarea,
-        input {
-            width: 55% !important;
-        }
-
-        input {
-            height: 7%;
-        }
-
-        button {
-            width: 15% !important;
-        }
-
-        textarea {
-            height: 40%;
-        }
-    }
-}
-
-// mobile contact page
-.Contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.35);
-    // 固定在螢幕右下角
-    position: fixed;
-    right: 3.5%;
-    bottom: 5%;
-    width: 3.5rem;
-    height: 3.5rem;
-    z-index: 99;
-    transition-delay: 0.2s;
-    transition: all 0.75s ease-in-out;
-
-    svg {
-        pointer-events: none;
-        visibility: visible;
-        opacity: 1;
-        transition-delay: 3s;
-        transition: all 3.5s ease-out;
-        // transition: all 1.2s ease-out;
-        fill: rgb(255, 255, 255);
-        width: 2rem;
-        height: 2rem;
-    }
-
-    .contactForm {
-        position: absolute;
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    &:hover:not(:focus) {
-        transition: all 0.3s ease-out;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-}
-
-.madeFocus {
-    // transition: top 0.3s, bottom 0.3s, left 0.3s, right 0.3s, width 0.3s, height 0.3s, opacity 0.3s, border-radius 0.3s;
-    transition: all 0.5s ease-in-out;
-    border-radius: 20px;
-    width: 80%;
-    height: 70%;
-    right: 50%;
-    bottom: 50%;
-    transform: translate(50%, 50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 10000;
-
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.8) !important;
-    }
-}
-
-.madeFocusSvg {
-    transition: all 0.2s ease-out !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-}
-
-.madeFocusForm {
-    pointer-events: none;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 95%;
-    width: 95%;
-    transition-delay: 0.2s;
-    transition: all 0.5s ease-in-out;
-    visibility: visible !important;
-    opacity: 1 !important;
-
-    input,
-    button,
-    textarea {
-        color: white;
-        background-color: transparent;
-        pointer-events: all;
-        margin: 1rem;
-        padding: 0.25rem;
-    }
-
-    textarea,
-    input {
-        width: 85%;
-    }
-
-    input {
-        height: 7%;
-        outline: none;
-        border: none;
-        border-bottom: 1px white solid;
-    }
-
-    button {
-        width: 40%;
-        border: 1px white solid;
-        border-radius: 10px;
-        padding: 0.5rem;
-        color: white
-    }
-
-    textarea {
-        height: 40%;
-        outline: none;
-        border: 1px white solid;
-        border-radius: 10px
-    }
-}
-
-// footer
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@import "../../node_modules/bootstrap/scss/functions";
-@import "./helpers/variables";
-// @import "../../node_modules/bootstrap/scss/bootstrap";
-@import "../../node_modules/bootstrap/scss/maps";
-@import "../../node_modules/bootstrap/scss/mixins";
-@import "./helpers/utilities";
-// @import "../../node_modules/bootstrap/scss/utilities";
-// Layout & components
-@import "../../node_modules/bootstrap/scss/root";
-@import "../../node_modules/bootstrap/scss/reboot";
-@import "../../node_modules/bootstrap/scss/type";
-@import "../../node_modules/bootstrap/scss/images";
-@import "../../node_modules/bootstrap/scss/containers";
-@import "../../node_modules/bootstrap/scss/grid";
-@import "../../node_modules/bootstrap/scss/tables";
-@import "../../node_modules/bootstrap/scss/forms";
-@import "../../node_modules/bootstrap/scss/buttons";
-@import "../../node_modules/bootstrap/scss/transitions";
-// @import "../../node_modules/bootstrap/scss/dropdown";
-// @import "../../node_modules/bootstrap/scss/button-group";
-@import "../../node_modules/bootstrap/scss/nav";
-@import "../../node_modules/bootstrap/scss/navbar";
-@import "../../node_modules/bootstrap/scss/card";
-// @import "../../node_modules/bootstrap/scss/accordion";
-// @import "../../node_modules/bootstrap/scss/breadcrumb";
-// @import "../../node_modules/bootstrap/scss/pagination";
-// @import "../../node_modules/bootstrap/scss/badge";
-// @import "../../node_modules/bootstrap/scss/alert";
-// @import "../../node_modules/bootstrap/scss/progress";
-// @import "../../node_modules/bootstrap/scss/list-group";
-// @import "../../node_modules/bootstrap/scss/close";
-// @import "../../node_modules/bootstrap/scss/toasts";
-// @import "../../node_modules/bootstrap/scss/modal";
-// @import "../../node_modules/bootstrap/scss/tooltip";
-// @import "../../node_modules/bootstrap/scss/popover";
-// @import "../../node_modules/bootstrap/scss/carousel";
-// @import "../../node_modules/bootstrap/scss/spinners";
-// @import "../../node_modules/bootstrap/scss/offcanvas";
-@import "../../node_modules/bootstrap/scss/placeholders";
-// Helpers
-@import "../../node_modules/bootstrap/scss/helpers";
-// Utilities
-@import "../../node_modules/bootstrap/scss/utilities/api";
+        @import "../../node_modules/bootstrap/scss/functions";
+        @import "./helpers/variables";
+        // @import "../../node_modules/bootstrap/scss/bootstrap";
+        @import "../../node_modules/bootstrap/scss/maps";
+        @import "../../node_modules/bootstrap/scss/mixins";
+        @import "./helpers/utilities";
+        // @import "../../node_modules/bootstrap/scss/utilities";
+        // Layout & components
+        @import "../../node_modules/bootstrap/scss/root";
+        @import "../../node_modules/bootstrap/scss/reboot";
+        @import "../../node_modules/bootstrap/scss/type";
+        @import "../../node_modules/bootstrap/scss/images";
+        @import "../../node_modules/bootstrap/scss/containers";
+        @import "../../node_modules/bootstrap/scss/grid";
+        @import "../../node_modules/bootstrap/scss/tables";
+        @import "../../node_modules/bootstrap/scss/forms";
+        @import "../../node_modules/bootstrap/scss/buttons";
+        @import "../../node_modules/bootstrap/scss/transitions";
+        // @import "../../node_modules/bootstrap/scss/dropdown";
+        // @import "../../node_modules/bootstrap/scss/button-group";
+        @import "../../node_modules/bootstrap/scss/nav";
+        @import "../../node_modules/bootstrap/scss/navbar";
+        @import "../../node_modules/bootstrap/scss/card";
+        // @import "../../node_modules/bootstrap/scss/accordion";
+        // @import "../../node_modules/bootstrap/scss/breadcrumb";
+        // @import "../../node_modules/bootstrap/scss/pagination";
+        // @import "../../node_modules/bootstrap/scss/badge";
+        // @import "../../node_modules/bootstrap/scss/alert";
+        // @import "../../node_modules/bootstrap/scss/progress";
+        // @import "../../node_modules/bootstrap/scss/list-group";
+        // @import "../../node_modules/bootstrap/scss/close";
+        // @import "../../node_modules/bootstrap/scss/toasts";
+        // @import "../../node_modules/bootstrap/scss/modal";
+        // @import "../../node_modules/bootstrap/scss/tooltip";
+        // @import "../../node_modules/bootstrap/scss/popover";
+        // @import "../../node_modules/bootstrap/scss/carousel";
+        // @import "../../node_modules/bootstrap/scss/spinners";
+        // @import "../../node_modules/bootstrap/scss/offcanvas";
+        @import "../../node_modules/bootstrap/scss/placeholders";
+        // Helpers
+        @import "../../node_modules/bootstrap/scss/helpers";
+        // Utilities
+        @import "../../node_modules/bootstrap/scss/utilities/api";
