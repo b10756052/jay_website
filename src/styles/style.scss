@@ -444,6 +444,11 @@
 
         .madeFocus {
             // transition: top 0.3s, bottom 0.3s, left 0.3s, right 0.3s, width 0.3s, height 0.3s, opacity 0.3s, border-radius 0.3s;
+            // try
+            // -webkit-transform-style: preserve-3d;
+            will-change: transform;
+            -webkit-transform: translate3d(50%, 50%, 0);
+            //break
             transition: all 0.5s ease-in-out;
             border-radius: 20px;
             width: 80%;
@@ -453,9 +458,6 @@
             // transform: translate(50%, 50%);
             background-color: rgba(0, 0, 0, 0.8);
             z-index: 10000;
-            // try
-            -webkit-transform-style: preserve-3d;
-            -webkit-transform: translate3d(50%, 50%, 0);
 
             &:hover {
                 background-color: rgba(0, 0, 0, 0.8) !important;
@@ -480,13 +482,15 @@
             align-items: center;
             height: 95%;
             width: 95%;
+            // try
+            // -webkit-transform-style: preserve-3d;
+            will-change: transform;
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            //break
             transition-delay: 1s;
             transition: all 1.5s ease-in-out;
             visibility: visible !important;
             opacity: 1 !important;
-            // try
-            -webkit-transform-style: preserve-3d;
-            -webkit-transform: translate3d(-50%, -50%, 0);
 
             input,
             button,

@@ -10,13 +10,17 @@ const Homepage = () => {
       <div
         style={{
           top: "0vh",
-          bottom: "0vh",
-          left: "0vh",
-          right: "0vh",
+          // bottom: "0vh",
+          // left: "0vh",
+          // right: "0vh",
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          backgroundSize: "cover",
           backgroundImage:
             "url(https://images.unsplash.com/photo-1546900703-cf06143d1239?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1750&q=80)",
         }}
-        className="position-absolute bg-lg-cover bg-attachment-fixed d-block  "
+        className="position-absolute bg-sm-contain bg-lg-cover   bg-attachment-fixed d-block  "
       >
         {/* mask */}
         <div

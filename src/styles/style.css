@@ -361,6 +361,8 @@ p {
 }
 
 .madeFocus {
+  will-change: transform;
+  -webkit-transform: translate3d(50%, 50%, 0);
   transition: all 0.5s ease-in-out;
   border-radius: 20px;
   width: 80%;
@@ -369,8 +371,6 @@ p {
   bottom: 50%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 10000;
-  -webkit-transform-style: preserve-3d;
-  -webkit-transform: translate3d(50%, 50%, 0);
 }
 .madeFocus:hover {
   background-color: rgba(0, 0, 0, 0.8) !important;
@@ -393,12 +393,12 @@ p {
   align-items: center;
   height: 95%;
   width: 95%;
+  will-change: transform;
+  -webkit-transform: translate3d(-50%, -50%, 0);
   transition-delay: 1s;
   transition: all 1.5s ease-in-out;
   visibility: visible !important;
   opacity: 1 !important;
-  -webkit-transform-style: preserve-3d;
-  -webkit-transform: translate3d(-50%, -50%, 0);
 }
 .madeFocusForm input,
 .madeFocusForm button,
