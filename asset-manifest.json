@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/jay_website/static/css/main.c86716da.css",
-    "main.js": "/jay_website/static/js/main.ec90270c.js",
+    "main.css": "/jay_website/static/css/main.28eae256.css",
+    "main.js": "/jay_website/static/js/main.30b72655.js",
     "static/media/Cubic_11_1.013_R.ttf": "/jay_website/static/media/Cubic_11_1.013_R.a58a517e1458d16ea078.ttf",
     "static/media/picturesWebsite-screenshot.png": "/jay_website/static/media/picturesWebsite-screenshot.a737c2bd878859edb358.png",
     "static/media/resume.jpg": "/jay_website/static/media/resume.4e5eae4da85b8038b2be.jpg",
@@ -9,11 +9,11 @@
     "static/media/fake-yt-screenshot.png": "/jay_website/static/media/fake-yt-screenshot.02a5faad88c6096ad758.png",
     "static/media/鵬爺夜市街拍.jpg": "/jay_website/static/media/鵬爺夜市街拍.804363daaf31965a06b1.jpg",
     "index.html": "/jay_website/index.html",
-    "main.c86716da.css.map": "/jay_website/static/css/main.c86716da.css.map",
-    "main.ec90270c.js.map": "/jay_website/static/js/main.ec90270c.js.map"
+    "main.28eae256.css.map": "/jay_website/static/css/main.28eae256.css.map",
+    "main.30b72655.js.map": "/jay_website/static/js/main.30b72655.js.map"
   },
   "entrypoints": [
-    "static/css/main.c86716da.css",
-    "static/js/main.ec90270c.js"
+    "static/css/main.28eae256.css",
+    "static/js/main.30b72655.js"
   ]
 }
