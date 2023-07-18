@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/jay_website/static/css/main.a005d2cb.css",
+    "main.css": "/jay_website/static/css/main.a6a01546.css",
     "main.js": "/jay_website/static/js/main.6363456c.js",
     "static/media/Cubic_11_1.013_R.ttf": "/jay_website/static/media/Cubic_11_1.013_R.a58a517e1458d16ea078.ttf",
     "static/media/picturesWebsite-screenshot.png": "/jay_website/static/media/picturesWebsite-screenshot.a737c2bd878859edb358.png",
@@ -9,11 +9,11 @@
     "static/media/fake-yt-screenshot.png": "/jay_website/static/media/fake-yt-screenshot.02a5faad88c6096ad758.png",
     "static/media/鵬爺夜市街拍.jpg": "/jay_website/static/media/鵬爺夜市街拍.804363daaf31965a06b1.jpg",
     "index.html": "/jay_website/index.html",
-    "main.a005d2cb.css.map": "/jay_website/static/css/main.a005d2cb.css.map",
+    "main.a6a01546.css.map": "/jay_website/static/css/main.a6a01546.css.map",
     "main.6363456c.js.map": "/jay_website/static/js/main.6363456c.js.map"
   },
   "entrypoints": [
-    "static/css/main.a005d2cb.css",
+    "static/css/main.a6a01546.css",
     "static/js/main.6363456c.js"
   ]
 }
