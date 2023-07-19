@@ -12,7 +12,7 @@
 
 ### Pages Intro：
 
-- HomePage：背景圖以 fixed 進行固定
+- HomePage：背景圖做成 bg-attachment-fixed 的類似效果
 
 - AboutPage：
   簡單介紹個人自傳
