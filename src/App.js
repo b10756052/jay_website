@@ -31,8 +31,9 @@ function App() {
   const documentHeight = () => {
     const doc = document.documentElement;
     doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
+    console.log("設1次");
   };
-  window.addEventListener("resize", documentHeight);
+  // window.addEventListener("resize", documentHeight);
   documentHeight();
 
   return (
