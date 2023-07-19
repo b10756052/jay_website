@@ -2,11 +2,7 @@ import React from "react";
 
 const Homepage = () => {
   return (
-    <div
-      id="HomePhoto"
-      class="position-relative "
-      style={{ minHeight: "100vh", position: "relative" }}
-    >
+    <div id="HomePhoto" class="position-relative vh100">
       {/* 圖片 */}
       <div
         id="homepagePCDisplay"

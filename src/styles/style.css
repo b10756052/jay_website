@@ -9,6 +9,21 @@
   font-family: "Silkscreen", "CH";
 }
 
+:root {
+  --doc-height: 100%;
+}
+
+html,
+body {
+  height: 100vh;
+  /* fallback for Js load */
+  height: var(--doc-height);
+}
+
+.vh100 {
+  height: var(--doc-height);
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10.5px;

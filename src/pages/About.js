@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div
       id="About"
-      className="position-relative   d-flex align-items-center justify-content-center "
+      className="position-relative  d-flex align-items-center justify-content-center "
       style={{
         minHeight: "88vh",
       }}

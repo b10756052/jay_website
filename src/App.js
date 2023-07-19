@@ -27,6 +27,14 @@ function App() {
       return document.querySelector(".navBarButton").click();
   });
 
+  //抓取頁面高度，再丟回去給 css
+  const documentHeight = () => {
+    const doc = document.documentElement;
+    doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
+  };
+  window.addEventListener("resize", documentHeight);
+  documentHeight();
+
   return (
     <div className="App">
       <Nav />
