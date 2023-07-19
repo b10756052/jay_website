@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import "./styles/style.css";
@@ -33,7 +33,7 @@ function App() {
     doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
     console.log("設1次");
   };
-
+  window.addEventListener("resize", documentHeight);
   documentHeight();
 
   return (
