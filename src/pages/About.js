@@ -12,17 +12,17 @@ const About = () => {
   return (
     <div
       id="About"
-      className="position-relative container d-flex align-items-center  "
+      className="position-relative   d-flex align-items-center  "
       style={{
         minHeight: "88vh",
-
-        // backgroundImage:
-        //   "url(https://images.unsplash.com/photo-1515549832467-8783363e19b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80)",
+        display: "flex",
+        justifyContent: "center",
+        alignContent: "center",
       }}
     >
       <div
         style={{ minHeight: "75vh" }}
-        className="row g-0 flex-row-reverse px-5 py-3 pb-5 p-md-5  "
+        className="container  row g-0 flex-row-reverse px-5 py-3 pb-5 p-md-5  "
       >
         {/* 圖片區 */}
         <div className="col-md-4 py-3 py-md-0 d-flex">

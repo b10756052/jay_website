@@ -10,26 +10,6 @@
   -webkit-backface-visibility: hidden !important;
 }
 
-#HomePhoto {
-  overflow: hidden;
-}
-
-#homepagePCDisplay {
-  display: block;
-}
-
-#homepagePhoneDisplay {
-  display: none;
-}
-
-@media screen and (max-width: 500px) {
-  #homepagePCDisplay {
-    display: none;
-  }
-  #homepagePhoneDisplay {
-    display: block;
-  }
-}
 /* width */
 ::-webkit-scrollbar {
   width: 10.5px;
@@ -100,21 +80,6 @@ p {
   transition: all 0.5s ease;
 }
 
-.bg-lg-cover {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.bg-attachment-fixed {
-  background-attachment: fixed;
-}
-
-.object-fit-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 #AboutButton {
   transition: all 0.3s ease;
   box-shadow: 0px 0px 1.75px 2px #8e0103;
@@ -136,6 +101,11 @@ p {
 
 .ResumePhoto {
   box-shadow: 0px 0px 20px 1px rgb(98, 98, 98);
+}
+
+#About,
+#Project {
+  background-color: white;
 }
 
 #Skill {

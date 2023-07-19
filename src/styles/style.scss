@@ -13,29 +13,24 @@
             -webkit-backface-visibility: hidden !important;
         }
 
-        // 主頁圖片根據PC、PHONE切換顯示
-        #HomePhoto {
-            overflow: hidden;
-        }
-
-        #homepagePCDisplay {
-            display: block;
-        }
-
-        #homepagePhoneDisplay {
-            display: none;
-        }
-
-        @media screen and (max-width:500px) {
-            #homepagePCDisplay {
-                display: none;
-            }
-
-            #homepagePhoneDisplay {
-                display: block;
-            }
-        }
-
+        // // 主頁圖片根據PC、PHONE切換顯示
+        // #HomePhoto {
+        //     overflow: hidden;
+        // }
+        // #homepagePCDisplay {
+        //     display: block;
+        // }
+        // #homepagePhoneDisplay {
+        //     display: none;
+        // }
+        // @media screen and (max-width:500px) {
+        //     #homepagePCDisplay {
+        //         display: none;
+        //     }
+        //     #homepagePhoneDisplay {
+        //         display: block;
+        //     }
+        // }
         //scroll bar styling
         /* width */
 
@@ -121,19 +116,8 @@
             transition: all 0.5s ease;
         }
 
-        .bg-lg-cover {
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-        }
-
-        .bg-attachment-fixed {
-            background-attachment: fixed;
-        }
-
-        .object-fit-cover {
-            object-fit: cover;
-        }
+        // AboutPage
+        #About {}
 
         // AboutPage's LoadMore Button
         #AboutButton {
@@ -161,6 +145,11 @@
         }
 
         // pages頁面白灰白灰錯開顯示
+        #About,
+        #Project {
+            background-color: white;
+        }
+
         #Skill {
             background-color: rgb(243, 243, 243)
         }
