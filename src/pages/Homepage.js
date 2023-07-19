@@ -2,14 +2,17 @@ import React from "react";
 
 const Homepage = () => {
   return (
-    <div id="HomePhoto" class="position-relative vh100">
+    <div
+      id="HomePhoto"
+      class="position-relative vh100"
+      style={{ overflow: "hidden" }}
+    >
       {/* 圖片 */}
       <div
         id="homepagePCDisplay"
         style={{
           top: "0vh",
           width: "100%",
-          height: "100%",
           objectFit: "cover",
           position: "fixed",
           backgroundPosition: "center",
@@ -17,10 +20,11 @@ const Homepage = () => {
           backgroundImage:
             "url(https://images.unsplash.com/photo-1546900703-cf06143d1239?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1750&q=80)",
         }}
+        className="vh100"
       >
         {/* mask */}
         <div
-          className="w-100 h-100"
+          className="w-100 vh100"
           style={{ zIndex: "1000", backgroundColor: "rgba(0,0,0,0.6)" }}
         ></div>
       </div>

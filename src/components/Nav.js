@@ -73,7 +73,7 @@ const Nav = () => {
 
     // 執行 判斷nav是不是在最上面來切換 的Function
     const handleNavChangeStyle = () => {
-      // changeNavStyling();
+      changeNavStyling();
     };
     window.addEventListener("scroll", handleNavChangeStyle);
 
