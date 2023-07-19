@@ -7,49 +7,7 @@ const Homepage = () => {
       class="position-relative "
       style={{ minHeight: "100vh", position: "relative" }}
     >
-      {/* phone display
-      <div
-        id="homepagePhoneDisplay"
-        style={{
-          width: "100vw",
-          height: "100vh",
-          objectFit: "cover",
-          backgroundPosition: "center",
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1546900703-cf06143d1239?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1750&q=80)",
-        }}
-        className="position-static   "
-      >
-        mask
-        <div
-          className="w-100 h-100"
-          style={{ zIndex: "1000", backgroundColor: "rgba(0,0,0,0.6)" }}
-        ></div>
-      </div> */}
-
-      {/* pc display
-      <div
-        id="homepagePCDisplay"
-        style={{
-          top: "0vh",
-          bottom: "0vh",
-          left: "0vh",
-          right: "0vh",
-          objectFit: "cover",
-          backgroundPosition: "center",
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1546900703-cf06143d1239?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1750&q=80)",
-        }}
-        className="position-absolute  bg-attachment-fixed   "
-      >
-        mask
-        <div
-          className="w-100 h-100"
-          style={{ zIndex: "1000", backgroundColor: "rgba(0,0,0,0.6)" }}
-        ></div>
-      </div> */}
-
-      {/* pc display try */}
+      {/* 圖片 */}
       <div
         id="homepagePCDisplay"
         style={{

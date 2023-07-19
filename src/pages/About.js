@@ -12,12 +12,9 @@ const About = () => {
   return (
     <div
       id="About"
-      className="position-relative   d-flex align-items-center  "
+      className="position-relative   d-flex align-items-center justify-content-center "
       style={{
         minHeight: "88vh",
-        display: "flex",
-        justifyContent: "center",
-        alignContent: "center",
       }}
     >
       <div
@@ -27,8 +24,9 @@ const About = () => {
         {/* 圖片區 */}
         <div className="col-md-4 py-3 py-md-0 d-flex">
           <img
+            style={{ objectFit: "cover" }}
             src={ResumePhoto}
-            className="w-100  object-fit-cover rounded-3 ResumePhoto"
+            className="w-100  rounded-4 ResumePhoto"
           />
         </div>
         {/* 文字區 */}

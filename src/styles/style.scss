@@ -10,27 +10,8 @@
             // font-family: 'Noto Sans TC', sans-serif;
             // font-family: 'Silkscreen', Noto Sans TC;
             font-family: 'Silkscreen', "CH";
-            -webkit-backface-visibility: hidden !important;
         }
 
-        // // 主頁圖片根據PC、PHONE切換顯示
-        // #HomePhoto {
-        //     overflow: hidden;
-        // }
-        // #homepagePCDisplay {
-        //     display: block;
-        // }
-        // #homepagePhoneDisplay {
-        //     display: none;
-        // }
-        // @media screen and (max-width:500px) {
-        //     #homepagePCDisplay {
-        //         display: none;
-        //     }
-        //     #homepagePhoneDisplay {
-        //         display: block;
-        //     }
-        // }
         //scroll bar styling
         /* width */
 
@@ -99,7 +80,7 @@
             transition: all 0.5s ease;
         }
 
-        // 手機板的navbarbtn
+        // 手機板的navbarbtn去除外框線
         .navBarButton {
             border: none !important;
 
@@ -115,9 +96,6 @@
         #navbarNavAltMarkup {
             transition: all 0.5s ease;
         }
-
-        // AboutPage
-        #About {}
 
         // AboutPage's LoadMore Button
         #AboutButton {
@@ -150,11 +128,11 @@
             background-color: white;
         }
 
+        // skill page
         #Skill {
             background-color: rgb(243, 243, 243)
         }
 
-        // skill page
         #Skill {
             display: flex;
             flex-direction: column;
@@ -249,7 +227,6 @@
         }
 
         // project page
-        // https://codepen.io/aron-tw/pen/pLJqgE <-- 參考網址
         #Project {
             display: flex;
             flex-direction: column;
@@ -368,69 +345,10 @@
                         border-radius: 10px;
                     }
                 }
-
-                // .p-shadow {
-                //     text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
-                // }
             }
 
             .p-shadow {
                 text-shadow: 0.75px 0.75px rgba(0, 0, 0, 0.02), 1.5px 1.5px rgba(0, 0, 0, 0.02), 2.25px 2.25px rgba(0, 0, 0, 0.02), 3px 3px rgba(0, 0, 0, 0.02), 0.075rem 0.075rem rgba(0, 0, 0, 0.02), 4.5px 4.5px rgba(0, 0, 0, 0.02), 5.25px 5.25px rgba(0, 0, 0, 0.02), 6px 6px rgba(0, 0, 0, 0.02), 6.75px 6.75px rgba(0, 0, 0, 0.02), 0.225rem 0.225rem rgba(0, 0, 0, 0.02), 7.5px 7.5px rgba(0, 0, 0, 0.02), 8.25px 8.25px rgba(0, 0, 0, 0.02), 9px 9px rgba(0, 0, 0, 0.02), 9.75px 9.75px rgba(0, 0, 0, 0.02), 0.325rem 0.325rem rgba(0, 0, 0, 0.02), 10.5px 10.5px rgba(0, 0, 0, 0.02), 11.25px 11.25px rgba(0, 0, 0, 0.02), 12px 12px rgba(0, 0, 0, 0.02), 12.75px 12.75px rgba(0, 0, 0, 0.02), 0.425rem 0.425rem rgba(0, 0, 0, 0.02);
-            }
-        }
-
-        @media screen and (min-width:500px) {
-            .contactForm {
-                margin-top: -80% !important;
-                margin-left: -50% !important;
-            }
-
-            .madeFocus {
-                // margin-right: -20% !important;
-                margin-bottom: -60% !important;
-            }
-        }
-
-        @media screen and (min-width:600px) {
-            .contactForm {
-                margin-top: -60% !important;
-                margin-left: -50% !important;
-            }
-
-            .madeFocus {
-                // margin-right: -20% !important;
-                margin-bottom: -50% !important;
-            }
-        }
-
-        @media screen and (min-width:700px) {
-            .contactForm {
-                margin-top: -55% !important;
-                // margin-left: -50% !important;
-            }
-
-            .madeFocus {
-                // margin-right: -20% !important;
-                margin-bottom: -40% !important;
-            }
-        }
-
-        @media screen and (min-width:800px) {
-            .contactForm {
-                margin-top: -50% !important;
-                margin-left: -50% !important;
-            }
-        }
-
-        @media screen and (min-width:900px) {
-            .contactForm {
-                margin-top: -45% !important;
-                // margin-left: -50% !important;
-            }
-
-            .madeFocus {
-                // margin-right: -20% !important;
-                margin-bottom: -40% !important;
             }
         }
 
@@ -447,8 +365,10 @@
             }
 
             .madeFocus {
-                // margin-right: -20% !important;
-                margin-bottom: -20% !important;
+                width: 700px !important;
+                height: 400px !important;
+                margin-right: -350px !important;
+                margin-bottom: -200px !important;
 
                 textarea,
                 input {
@@ -469,9 +389,9 @@
             }
 
             .contactForm {
-                width: 100% !important;
-                height: 100% !important;
-                margin-top: -22% !important;
+                width: 700px !important;
+                height: 400px !important;
+                margin-top: -200px !important;
                 margin-left: -50% !important;
             }
         }
@@ -490,8 +410,8 @@
             width: 3.5rem;
             height: 3.5rem;
             z-index: 99;
-            transition-delay: 0.5s;
-            transition: all 1s ease-in-out;
+            transition-delay: 0.2s;
+            transition: all 0.5s ease-in-out;
 
             svg {
                 pointer-events: none;
@@ -524,14 +444,14 @@
             //break
             // transition: all 0.5s ease-in-out;
             border-radius: 20px;
-            width: 80vw;
-            height: 70vh;
+            width: 350px;
+            height: 600px;
             right: 50%;
             bottom: 50%;
             background-color: rgba(0, 0, 0, 0.8);
             z-index: 10000;
-            margin-right: -40%;
-            margin-bottom: -75%;
+            margin-right: -175px;
+            margin-bottom: -300px;
 
             &:hover {
                 background-color: rgba(0, 0, 0, 0.8) !important;
@@ -548,15 +468,15 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100%;
-            width: 100%;
+            width: 350px;
+            height: 600px;
             // try
-            margin-top: -90%;
-            margin-left: -50%;
+            margin-top: -300px;
+            margin-left: -175px;
             //break
-            transition-delay: 0.8s;
+            transition-delay: 0.3s;
             transition-property: transform, opacity, left, top, bottom, right;
-            transition-duration: 1.5s;
+            transition-duration: 1s;
             // transition: all 1.5s ease-in-out;
             visibility: visible !important;
             opacity: 1 !important;
@@ -578,9 +498,10 @@
 
             input {
                 height: 7%;
-                outline: none;
-                border: none;
-                border-bottom: 1px white solid;
+                outline: none !important;
+                border: none !important;
+                border-bottom: 1px white solid !important;
+                border-radius: 0px !important;
             }
 
             button {
