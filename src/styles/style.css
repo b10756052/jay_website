@@ -305,7 +305,7 @@ p {
   }
   .madeFocus textarea,
   .madeFocus input {
-    width: 55% !important;
+    width: 60% !important;
   }
   .madeFocus input {
     height: 7%;
@@ -317,10 +317,33 @@ p {
     height: 40%;
   }
   .contactForm {
+    padding: 0 !important;
     width: 700px !important;
     height: 400px !important;
     margin-top: -200px !important;
     margin-left: -50% !important;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .madeFocus {
+    width: 1100px !important;
+    height: 500px !important;
+    margin-right: -550px !important;
+    margin-bottom: -250px !important;
+  }
+  .contactForm {
+    width: 1100px !important;
+    padding: 0 !important;
+  }
+  .contactForm textarea,
+  .contactForm input {
+    width: 65% !important;
+  }
+  .contactForm input {
+    height: 7%;
+  }
+  .contactForm button {
+    width: 15% !important;
   }
 }
 .Contact {
